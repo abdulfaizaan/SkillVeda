@@ -1,0 +1,32 @@
+version: "3.8"
+services:
+  # Neo4j - The Core Skill Graph
+  neo4j:
+    image: neo4j:5.12.0
+    container_name: skillgraph-neo4j
+    ports:
+      - "7474:7474" # HTTP Browser
+      - "7687:7687" # Bolt protocol
+    environment:
+      - NEO4J_AUTH=neo4j/skillgraph2026
+      - NEO4J_apoc_export_file_enabled=true
+      - NEO4J_apoc_import_file_enabled=true
+      - NEO4J_apoc_import_file_use__neo4j__config=true
+    volumes:
+      - ./data/neo4j/data:/data
+      - ./data/neo4j/logs:/logs
+    restart: unless-stopped
+
+  # PostgreSQL - User Auth & Portal Metadata
+  postgres:
+    image: postgres:15-alpine
+    container_name: skillgraph-postgres
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=skillgraph_db_pass
+      - POSTGRES_DB=skillgraph
+    volumes:
+      - ./data/postgres:/var/lib/postgresql/data
+    restart: unless-stopped
