@@ -54,7 +54,7 @@ export default function InteractiveMap() {
         </h2>
         
         <p className="text-[17px] text-text-muted mb-10 max-w-md leading-relaxed">
-          Explore how skills are connected, see what's in demand, and discover new possibilities.
+          Explore how skills are connected, see what&apos;s in demand, and discover new possibilities.
         </p>
         
         <div className="relative mb-6">

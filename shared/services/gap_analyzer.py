@@ -61,6 +61,44 @@ def _get_skill_demand(skill_id: str, taxonomy: dict) -> float:
     return 0.5
 
 
+# ============================================================
+# Scoring rules (shared by role gap analysis and job matching)
+# ============================================================
+STRONG_COVERAGE = 0.8
+DEVELOPING_COVERAGE = 0.4
+
+
+def classify_coverage(user_level: int, required_level: int) -> str:
+    """Return "strong", "medium" or "critical" for one required skill."""
+    required_level = max(1, required_level)
+    coverage = min(user_level / required_level, 1.0)
+    if coverage >= STRONG_COVERAGE:
+        return "strong"
+    if coverage >= DEVELOPING_COVERAGE:
+        return "medium"
+    return "critical"
+
+
+def weighted_coverage(items: list[tuple[int, int, float]]) -> int:
+    """
+    Demand-weighted coverage in percent.
+
+    items: (user_level, required_level, demand_weight) per required skill.
+    Partial progress counts; higher-demand skills contribute slightly more.
+    """
+    covered = 0.0
+    total_weight = 0.0
+    for user_level, required_level, demand in items:
+        covered += min(user_level / max(1, required_level), 1.0) * demand
+        total_weight += demand
+    return round((covered / total_weight) * 100) if total_weight else 0
+
+
+def estimate_effort_weeks(gap: int) -> int:
+    """Rough learning effort for closing a proficiency gap (0-100 points)."""
+    return max(1, int((max(gap, 0) / 100) * 8))
+
+
 def compute_gap(
     user_skills: list[dict],
     target_role_id: str,
@@ -115,12 +153,45 @@ def compute_gap(
             "learning_roadmap": []
         }
 
+    # Resolve role title
+    role_title = target_role_id.replace("_", " ").title()
+    for role in taxonomy.get("roles", []):
+        if role["id"] == target_role_id:
+            role_title = role["title"]
+            break
+
+    return compute_gap_for_requirements(user_skills, required_skills, role_title, target_role_id, taxonomy)
+
+
+def compute_gap_for_requirements(
+    user_skills: list[dict],
+    required_skills: list[dict],
+    role_title: str,
+    target_role_id: str,
+    taxonomy: Optional[dict] = None,
+) -> dict:
+    """
+    Score a skill profile against any list of requirements
+    ({"skill_id", "proficiency_required"}). Used for taxonomy roles and for
+    job postings so both share one scoring algorithm.
+    """
+    if taxonomy is None:
+        taxonomy = _load_taxonomy()
+
     # Step 2: Build a lookup of user's current skills
+    valid_skill_ids = {skill.get("id") for skill in taxonomy.get("skills", [])}
     user_skill_map = {}
-    for s in user_skills:
-        sid = s.get("skill_id", "")
-        if sid:
-            user_skill_map[sid] = s.get("proficiency", 50)
+    for skill in user_skills:
+        if not isinstance(skill, dict):
+            continue
+        sid = str(skill.get("skill_id", "")).strip()
+        if not sid or sid not in valid_skill_ids:
+            continue
+        try:
+            proficiency = int(float(skill.get("proficiency", 50)))
+        except (TypeError, ValueError):
+            proficiency = 0
+        user_skill_map[sid] = max(0, min(100, proficiency))
 
     # Step 3: Classify each required skill
     strong_skills = []
@@ -129,10 +200,10 @@ def compute_gap(
 
     for req in required_skills:
         skill_id = req["skill_id"]
-        required_level = req.get("proficiency_required", 60)
+        required_level = max(1, min(100, int(req.get("proficiency_required", 60))))
         user_level = user_skill_map.get(skill_id, 0)
         gap = required_level - user_level
-        demand = _get_skill_demand(skill_id, taxonomy)
+        demand = max(0.1, min(1.0, float(_get_skill_demand(skill_id, taxonomy))))
 
         skill_entry = {
             "skill_id": skill_id,
@@ -144,10 +215,11 @@ def compute_gap(
             "demand_weight": demand
         }
 
-        if user_level >= required_level * 0.8:
+        status = classify_coverage(user_level, required_level)
+        if status == "strong":
             # User has >= 80% of required level → STRONG
             strong_skills.append(skill_entry)
-        elif user_level >= required_level * 0.4:
+        elif status == "medium":
             # User has 40-80% of required level → MEDIUM gap
             medium_gaps.append(skill_entry)
         else:
@@ -166,12 +238,16 @@ def compute_gap(
                 "user_proficiency": prof
             })
 
-    # Step 5: Compute overall readiness score
+    # Step 5: Compute weighted coverage across every required skill. Partial
+    # progress counts, while higher-demand skills contribute slightly more.
     total_required = len(required_skills)
-    if total_required > 0:
-        readiness = int((len(strong_skills) / total_required) * 100)
-    else:
-        readiness = 0
+    coverage_items = []
+    for req in required_skills:
+        skill_id = req["skill_id"]
+        required_level = max(1, min(100, int(req.get("proficiency_required", 60))))
+        demand = max(0.1, min(1.0, float(_get_skill_demand(skill_id, taxonomy))))
+        coverage_items.append((user_skill_map.get(skill_id, 0), required_level, demand))
+    readiness = weighted_coverage(coverage_items)
 
     # Step 6: Generate learning roadmap
     # Sort critical gaps by demand weight (highest demand first = learn first)
@@ -188,20 +264,14 @@ def compute_gap(
             "priority": "HIGH" if skill in critical_gaps else "MEDIUM",
             "current_level": skill["user_proficiency"],
             "target_level": skill["required_proficiency"],
-            "effort_estimate_weeks": max(1, int((skill["gap"] / 100) * 8))
+            "effort_estimate_weeks": estimate_effort_weeks(skill["gap"])
         })
-
-    # Resolve role title
-    role_title = target_role_id.replace("_", " ").title()
-    for role in taxonomy.get("roles", []):
-        if role["id"] == target_role_id:
-            role_title = role["title"]
-            break
 
     return {
         "target_role": role_title,
         "target_role_id": target_role_id,
         "overall_readiness": readiness,
+        "readiness_method": "demand_weighted_skill_coverage",
         "total_required_skills": total_required,
         "strong_count": len(strong_skills),
         "medium_gap_count": len(medium_gaps),

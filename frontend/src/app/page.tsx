@@ -117,7 +117,7 @@ export default function LandingPage() {
             Different questions.<br/>One common challenge.
           </h2>
           <p className="text-[17px] text-text-muted max-w-2xl leading-relaxed">
-            There's a wealth of information out there, but it's hard to know what really matters.
+            There&apos;s a wealth of information out there, but it&apos;s hard to know what really matters.
           </p>
         </div>
 
@@ -157,7 +157,7 @@ export default function LandingPage() {
             From your resume to a real career path.
           </h2>
           <p className="text-[17px] text-text-muted max-w-2xl leading-relaxed">
-            Powered by our own SkillVeda NLP engine, we understand your skills, map them to a dynamic skill graph, and help you discover what's next.
+            Powered by our own SkillVeda NLP engine, we understand your skills, map them to a dynamic skill graph, and help you discover what&apos;s next.
           </p>
         </div>
 

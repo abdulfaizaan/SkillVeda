@@ -5,6 +5,7 @@ Run with: uvicorn main:app --reload --port 8000
 Docs at:  http://localhost:8000/docs
 """
 import sys
+import os
 from pathlib import Path
 from fastapi import FastAPI, UploadFile, File, Form, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
@@ -15,8 +16,17 @@ from typing import Optional
 PROJECT_ROOT = Path(__file__).resolve().parent
 sys.path.insert(0, str(PROJECT_ROOT))
 
+# Load backend-only settings (LLM keys, DB path) from SkillVeda/.env if present.
+try:
+    from dotenv import load_dotenv
+    load_dotenv(PROJECT_ROOT / ".env")
+except ImportError:
+    pass
+
 from shared.nlp.skill_extractor import extract_skills
 from shared.services.gap_analyzer import compute_gap, get_available_roles
+from api.student import router as student_router
+from api.ai import router as ai_router
 
 # ============================================================
 # App Setup
@@ -27,14 +37,23 @@ app = FastAPI(
     version="1.0.0"
 )
 
-# Allow frontend to connect from any origin during development
+# Only the local frontend may call the API from a browser. Override with
+# CORS_ORIGINS="http://host1,http://host2".
+_cors_origins = [
+    origin.strip()
+    for origin in os.getenv("CORS_ORIGINS", "http://localhost:3000,http://127.0.0.1:3000,http://localhost:3005,http://127.0.0.1:3005").split(",")
+    if origin.strip()
+]
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
-    allow_credentials=True,
+    allow_origins=_cors_origins,
+    allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+app.include_router(student_router)
+app.include_router(ai_router)
 
 
 # ============================================================
@@ -50,6 +69,9 @@ class GapAnalysisRequest(BaseModel):
 class DirectGapRequest(BaseModel):
     skills: list[dict]
     target_role_id: str
+
+class ResumeGraphRequest(BaseModel):
+    skills: list[dict]
 
 
 # ============================================================
@@ -93,16 +115,42 @@ def api_extract_skills(req: ExtractSkillsRequest):
 async def api_extract_skills_file(file: UploadFile = File(...)):
     """
     Upload a file (PDF or TXT) and extract skills from it.
-    Currently supports .txt files. PDF support coming soon.
     """
+    import io
+
+    max_file_bytes = 10 * 1024 * 1024
+    
     if not file.filename:
         raise HTTPException(status_code=400, detail="No file provided.")
     
-    content = await file.read()
-    text = content.decode("utf-8", errors="ignore")
+    suffix = Path(file.filename).suffix.lower()
+    if suffix not in {".pdf", ".txt"}:
+        raise HTTPException(status_code=415, detail="Unsupported file type. Upload a text-based PDF or TXT file.")
+
+    content = await file.read(max_file_bytes + 1)
+    if len(content) > max_file_bytes:
+        raise HTTPException(status_code=413, detail="File exceeds the 10 MB upload limit.")
+    text = ""
+
+    if suffix == ".pdf":
+        try:
+            import PyPDF2
+        except ImportError as exc:
+            raise HTTPException(status_code=503, detail="PDF support is unavailable. Install the backend requirements and restart the API.") from exc
+        try:
+            pdf_reader = PyPDF2.PdfReader(io.BytesIO(content), strict=False)
+            if pdf_reader.is_encrypted:
+                raise HTTPException(status_code=400, detail="This PDF is password protected. Upload an unlocked PDF or paste the text.")
+            text = "\n".join(page.extract_text() or "" for page in pdf_reader.pages)
+        except HTTPException:
+            raise
+        except Exception as exc:
+            raise HTTPException(status_code=400, detail="Could not read this PDF. Make sure it is a valid, text-based PDF.") from exc
+    else:
+        text = content.decode("utf-8-sig", errors="replace")
     
     if len(text.strip()) < 10:
-        raise HTTPException(status_code=400, detail="File content too short or unreadable.")
+        raise HTTPException(status_code=400, detail="No readable text was found. Scanned image PDFs need OCR; try a text-based PDF or paste the resume text.")
     
     skills = extract_skills(text)
     return {
@@ -250,6 +298,196 @@ def api_analyze_syllabus(req: ExtractSkillsRequest):
             f"Add '{g['skill_name']}' to curriculum (Market demand: {g['demand_weight']:.0%})"
             for g in gaps[:5]
         ]
+    }
+
+
+# ============================================================
+# Graph Endpoints
+# ============================================================
+@app.get("/api/skills/search")
+def api_search_skills(q: str = "", limit: int = 10):
+    """Search the skill taxonomy for graph nodes the user can open."""
+    from shared.services.gap_analyzer import _load_taxonomy
+
+    query = q.strip().casefold()
+    if len(query) < 2:
+        return []
+
+    taxonomy = _load_taxonomy()
+    matches = []
+    for skill in taxonomy.get("skills", []):
+        skill_id = str(skill.get("id", ""))
+        name = str(skill.get("name", skill_id.replace("_", " ")))
+        aliases = skill.get("aliases", [])
+        if isinstance(aliases, str):
+            aliases = [aliases]
+
+        searchable = [name, skill_id.replace("_", " "), *[str(alias) for alias in aliases]]
+        normalized = [value.casefold() for value in searchable]
+        if not any(query in value for value in normalized):
+            continue
+
+        exact_match = any(query == value for value in normalized)
+        prefix_match = any(value.startswith(query) for value in normalized)
+        rank = 0 if exact_match else 1 if prefix_match else 2
+        matches.append((rank, name.casefold(), {
+            "id": skill_id,
+            "label": name,
+            "category": skill.get("category", "unknown"),
+        }))
+
+    bounded_limit = max(1, min(limit, 20))
+    matches.sort(key=lambda item: (item[0], item[1]))
+    return [item[2] for item in matches[:bounded_limit]]
+
+
+@app.post("/api/graph/resume")
+def api_get_resume_skill_graph(req: ResumeGraphRequest):
+    """Build a graph from the skills actually extracted from a learner's resume."""
+    from shared.services.gap_analyzer import _load_taxonomy
+
+    taxonomy = _load_taxonomy()
+    skills_by_id = {
+        str(skill.get("id")): skill
+        for skill in taxonomy.get("skills", [])
+        if skill.get("id")
+    }
+
+    resume_nodes_by_id: dict[str, dict] = {}
+    for extracted in req.skills:
+        skill_id = str(extracted.get("skill_id", "")).strip()
+        skill = skills_by_id.get(skill_id)
+        if not skill:
+            continue
+
+        raw_proficiency = extracted.get("proficiency")
+        try:
+            proficiency = max(0, min(100, int(raw_proficiency)))
+        except (TypeError, ValueError):
+            proficiency = None
+
+        raw_confidence = extracted.get("confidence")
+        try:
+            confidence = max(0.0, min(1.0, float(raw_confidence)))
+        except (TypeError, ValueError):
+            confidence = None
+
+        resume_nodes_by_id[skill_id] = {
+            "id": skill_id,
+            "label": skill.get("name", skill_id.replace("_", " ").title()),
+            "category": skill.get("category", "unknown"),
+            "in_resume": True,
+            "proficiency": proficiency,
+            "confidence": confidence,
+            "evidence": str(extracted.get("evidence", ""))[:240],
+        }
+
+    if not resume_nodes_by_id:
+        raise HTTPException(status_code=400, detail="No extracted skills matched the skill taxonomy. Analyze the resume again.")
+
+    resume_skill_ids = set(resume_nodes_by_id)
+    focus_id = max(
+        resume_skill_ids,
+        key=lambda skill_id: resume_nodes_by_id[skill_id]["proficiency"] or 0,
+    )
+
+    # Keep the canvas focused on one skill's direct neighborhood. The complete
+    # resume inventory is returned separately for the UI's selectable skill list.
+    focus_skill = skills_by_id[focus_id]
+    prerequisite_ids = set(focus_skill.get("prerequisites", [])) - {focus_id}
+    related_ids = set(focus_skill.get("related", [])) - prerequisite_ids - {focus_id}
+    neighbor_ids = (prerequisite_ids | related_ids) & skills_by_id.keys()
+
+    nodes = []
+    for neighbor_id in neighbor_ids:
+        taxonomy_skill = skills_by_id[neighbor_id]
+        profile_data = resume_nodes_by_id.get(neighbor_id, {})
+        nodes.append({
+            "id": neighbor_id,
+            "label": taxonomy_skill.get("name", neighbor_id.replace("_", " ").title()),
+            "category": taxonomy_skill.get("category", "unknown"),
+            "in_resume": neighbor_id in resume_skill_ids,
+            "proficiency": profile_data.get("proficiency"),
+            "confidence": profile_data.get("confidence"),
+            "evidence": profile_data.get("evidence", ""),
+        })
+    nodes.sort(key=lambda node: (node["label"].casefold(), node["id"]))
+
+    edges = [
+        {"source": prerequisite_id, "target": focus_id, "type": "prerequisite"}
+        for prerequisite_id in prerequisite_ids
+        if prerequisite_id in skills_by_id
+    ]
+    edges.extend(
+        {"source": focus_id, "target": related_id, "type": "related"}
+        for related_id in related_ids
+        if related_id in skills_by_id
+    )
+    edges.sort(key=lambda edge: (edge["type"], edge["source"], edge["target"]))
+
+    resume_skills = sorted(
+        resume_nodes_by_id.values(),
+        key=lambda node: (node["label"].casefold(), node["id"]),
+    )
+
+    return {
+        "center": resume_nodes_by_id[focus_id],
+        "nodes": nodes,
+        "edges": edges,
+        "resume_skills": resume_skills,
+    }
+
+
+@app.get("/api/graph/{skill_id}")
+def api_get_skill_graph(skill_id: str):
+    """
+    Returns the network graph data for a specific skill, including its prerequisites
+    and related skills from the taxonomy. Relationship direction and type are kept
+    explicit so the UI can distinguish prerequisites from adjacent skills.
+    """
+    from shared.services.gap_analyzer import _load_taxonomy
+
+    taxonomy = _load_taxonomy()
+    skills = taxonomy.get("skills", [])
+    skills_by_id = {skill.get("id"): skill for skill in skills if skill.get("id")}
+    center_skill = skills_by_id.get(skill_id)
+    if not center_skill:
+        raise HTTPException(status_code=404, detail="Skill not found")
+
+    prerequisite_ids = set(center_skill.get("prerequisites", [])) - {skill_id}
+    related_ids = set(center_skill.get("related", [])) - prerequisite_ids - {skill_id}
+    neighbor_ids = (prerequisite_ids | related_ids) & skills_by_id.keys()
+
+    nodes = [
+        {
+            "id": neighbor_id,
+            "label": skills_by_id[neighbor_id].get("name", neighbor_id.replace("_", " ").title()),
+            "category": skills_by_id[neighbor_id].get("category", "unknown"),
+        }
+        for neighbor_id in neighbor_ids
+    ]
+    nodes.sort(key=lambda node: (node["label"].casefold(), node["id"]))
+
+    edges = [
+        {"source": prerequisite_id, "target": skill_id, "type": "prerequisite"}
+        for prerequisite_id in prerequisite_ids
+        if prerequisite_id in skills_by_id
+    ]
+    edges.extend(
+        {"source": skill_id, "target": related_id, "type": "related"}
+        for related_id in related_ids
+        if related_id in skills_by_id
+    )
+    edges.sort(key=lambda edge: (edge["type"], edge["source"], edge["target"]))
+
+    return {
+        "center": {
+            "id": center_skill["id"],
+            "label": center_skill["name"],
+            "category": center_skill.get("category", "unknown"),
+        },
+        "nodes": nodes,
+        "edges": edges,
     }
 
 

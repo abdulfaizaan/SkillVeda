@@ -42,33 +42,56 @@ def _initialize():
 
 def _estimate_proficiency_and_context(text: str, skill_word: str) -> tuple[int, str]:
     """
-    Estimates proficiency based on context clues near the skill mention.
+    Estimates proficiency based on context clues near all mentions of the skill,
+    and boosts score based on frequency of mentions.
     Returns (proficiency_score, evidence_string).
     """
-    # Create a regex to find the skill and grab surrounding text (up to 40 chars before and after)
-    # Using re.escape for the skill word.
     escaped_skill = re.escape(skill_word)
-    pattern = re.compile(r'(.{0,40})\b' + escaped_skill + r'\b(.{0,40})', re.IGNORECASE)
+    # Find all occurrences of the skill
+    pattern = re.compile(r'\b' + escaped_skill + r'\b', re.IGNORECASE)
+    matches = list(pattern.finditer(text))
     
-    match = pattern.search(text)
-    if not match:
+    if not matches:
         return 50, f"Mentioned {skill_word}"
         
-    before_ctx, after_ctx = match.groups()
-    context = (before_ctx + skill_word + after_ctx).strip()
-    context_lower = context.lower()
+    best_prof = 50
+    best_context = f"Mentioned {skill_word}"
     
-    # Check for proficiency indicators
-    if re.search(r'\b(5\+? years?|expert|advanced|led)\b', context_lower):
-        return 90, context
-    elif re.search(r'\b(2-4 years?|2 years?|3 years?|4 years?|proficient|strong)\b', context_lower):
-        return 70, context
-    elif re.search(r'\b(1 year|familiar|basic|beginner)\b', context_lower):
-        return 30, context
-    elif re.search(r'\b(learned|course|certification)\b', context_lower):
-        return 40, context
+    for match in matches:
+        # Extract 80 characters before and after for robust context, replace newlines with space
+        start_idx = max(0, match.start() - 80)
+        end_idx = min(len(text), match.end() + 80)
+        context = text[start_idx:end_idx].replace('\n', ' ').strip()
+        context_lower = context.lower()
         
-    return 50, context
+        prof = 50 # Default
+        
+        # 1. Explicit years or mastery
+        if re.search(r'\b(5\+? years?|expert|advanced|master|led)\b', context_lower):
+            prof = 90
+        elif re.search(r'\b(2-4 years?|2 years?|3 years?|4 years?|proficient|strong)\b', context_lower):
+            prof = 75
+        elif re.search(r'\b(1 year|familiar|basic|beginner)\b', context_lower):
+            prof = 35
+        # 2. Action verbs indicating applied experience (Projects / Work)
+        elif re.search(r'\b(built|developed|implemented|designed|created|architected|deployed)\b', context_lower):
+            prof = 80
+        elif re.search(r'\b(used|utilized|worked with|applied|performed)\b', context_lower):
+            prof = 65
+        # 3. Learning indicators
+        elif re.search(r'\b(learned|course|certification|specialization)\b', context_lower):
+            prof = 55
+            
+        if prof > best_prof:
+            best_prof = prof
+            best_context = context
+
+    # Frequency Boost: +5 proficiency for every extra time it's mentioned (max +15)
+    frequency_boost = min((len(matches) - 1) * 5, 15)
+    
+    final_prof = min(best_prof + frequency_boost, 95)
+    
+    return final_prof, best_context
 
 def extract_skills(text: str) -> List[Dict[str, Any]]:
     """
@@ -122,11 +145,15 @@ def extract_skills(text: str) -> List[Dict[str, Any]]:
     # 2. FUZZY MATCH
     # Find potential misspellings for terms not already found, or just process words
     # We will only fuzzy match single-word skills or individual words against single-word skills to avoid massive overhead
-    single_word_terms = [t for t in _ALL_SKILL_NAMES_AND_ALIASES.keys() if " " not in t]
+    single_word_terms = [
+        term for term in _ALL_SKILL_NAMES_AND_ALIASES
+        if re.fullmatch(r"[a-z0-9]+", term)
+    ]
+    ambiguous_fuzzy_words = {"learning"}
     
     for word in words:
         # If word is very short, skip fuzzy matching
-        if len(word) < 4:
+        if len(word) < 4 or word in ambiguous_fuzzy_words:
             continue
             
         # Check if we already have this word perfectly

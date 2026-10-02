@@ -4,3 +4,4 @@ pydantic
 neo4j
 google-generativeai
 python-multipart
+PyPDF2

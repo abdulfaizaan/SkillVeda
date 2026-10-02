@@ -1,0 +1,29 @@
+Candidate Name
+Phone Number Email Address in LinkedIn GitHub
+Professional Summary
+Computer Science and Business Systems graduate with hands-on experience in data analytics, ETL workflows, and data processing through academic and personal projects. Comfortable working with datasets, transforming data, building dimensional models, and preparing data for analysis using Databricks, PySpark, SQL, Delta Lake, Python, Power BI. Interested in using data to identify useful insights, build meaningful KPIs, and support better business decisions.
+Education
+University Name - B.Tech. Computer Science and Business Systems - CGPA: 8.6/10 India 2022-2026
+Senior Secondary School - Higher Secondary (CBSE) India 2021-2022
+Technical Skills
+Data Engineering: Databricks, PySpark, Spark SQL, Delta Lake, ETL/ELT, Medallion Architecture, Data Cleaning, Data Transformation
+Databases & Data Modeling: SQL, PostgreSQL, Joins, CTEs, Window Functions, Dimensional Modeling, Fact & Dimension Tables, Star Schema
+Data Analytics & BI: Power BI, KPI Design, Exploratory Data Analysis, Statistical Analysis, Pandas, NumPy, Matplotlib
+Programming: Python, SQL
+Cloud & Data Platforms: AWS (S3, RDS, EC2), Databricks Unity Catalog, Volumes, Delta Tables
+Development Tools: Git, GitHub, Docker, FastAPI, Postman, VS Code
+Projects
+E-Commerce Analytics Platform for Small Businesses 2026
+Built a Databricks-based analytics pipeline using PySpark and Spark SQL to process over 1.5M rows across multiple interconnected e-commerce datasets.
+Implemented a Bronze-Silver-Gold Medallion Architecture with Delta Lake to organize raw, cleaned, transformed, and analytics-ready data.
+Performed schema validation, datatype correction, null handling, deduplication, data quality checks, joins, filtering, and aggregations across customer, order, payment, product, seller, review, and geographical data.
+Designed fact and dimension tables and prepared datasets for KPIs such as revenue, Average Order Value (AOV), customer behavior, product performance, delivery performance, and regional trends.
+Used Unity Catalog, Volumes, Delta tables, and SQL views to organize and manage datasets for analysis and Power BI reporting.
+AI-Assisted Student Complaint Management Platform 2026
+Processed and analyzed 7,710 complaint records across 14 categories, combining complaint text with urgency, deadline, attachment, and other metadata for automated classification.
+Built backend workflows and REST APIs using FastAPI, with AWS RDS for structured data storage, S3 for attachments, and Amazon Cognito for authentication.
+Developed a multi-task RoBERTa-based classification model that achieved 90.01% accuracy and 90.31% macro F1 in the latest evaluation.
+Combined 768-dimensional text embeddings with 40 metadata features to incorporate both complaint text and structured contextual information into the classification workflow.
+Implemented semantic duplicate detection using sentence-transformer embeddings with a TF-IDF fallback, achieving 100% Precision@1 on an evaluation set of 40 mined duplicate pairs.
+Certifications
+Machine Learning Specialization - DeepLearning.AI & Stanford Online, Coursera
