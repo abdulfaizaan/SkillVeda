@@ -1,0 +1,500 @@
+{
+  "_meta": {
+    "kind": "seeded_demo_catalog",
+    "note": "Sample postings for local development. Companies are fictional and these are not live openings. They exist to demonstrate skill matching.",
+    "version": 1
+  },
+  "jobs": [
+    {
+      "id": "demo-ai-engineer-1",
+      "title": "AI Engineer (Entry Level)",
+      "company": "Sample Co. — Applied AI Lab",
+      "location": "Bengaluru, India",
+      "employment_type": "Full-time",
+      "role_id": "ai_engineer",
+      "required_skills": [
+        {
+          "skill_id": "python",
+          "level": 75
+        },
+        {
+          "skill_id": "machine_learning",
+          "level": 65
+        },
+        {
+          "skill_id": "deep_learning",
+          "level": 60
+        },
+        {
+          "skill_id": "pytorch",
+          "level": 60
+        },
+        {
+          "skill_id": "large_language_models",
+          "level": 60
+        },
+        {
+          "skill_id": "rag_systems",
+          "level": 55
+        }
+      ],
+      "preferred_skills": [
+        "langchain",
+        "vector_databases",
+        "docker",
+        "fastapi"
+      ],
+      "description": "Build and evaluate retrieval-augmented assistants over internal documents, from data preparation to a small production API."
+    },
+    {
+      "id": "demo-ai-intern-1",
+      "title": "Generative AI Intern",
+      "company": "Sample Co. — EdTech Studio",
+      "location": "Remote, India",
+      "employment_type": "Internship",
+      "role_id": "ai_engineer",
+      "required_skills": [
+        {
+          "skill_id": "python",
+          "level": 60
+        },
+        {
+          "skill_id": "prompt_engineering",
+          "level": 50
+        },
+        {
+          "skill_id": "large_language_models",
+          "level": 45
+        },
+        {
+          "skill_id": "generative_ai",
+          "level": 45
+        }
+      ],
+      "preferred_skills": [
+        "langchain",
+        "rag_systems",
+        "git"
+      ],
+      "description": "Prototype LLM features for learning products and help measure answer quality."
+    },
+    {
+      "id": "demo-ml-engineer-1",
+      "title": "Machine Learning Engineer",
+      "company": "Sample Co. — Fintech Platform",
+      "location": "Pune, India",
+      "employment_type": "Full-time",
+      "role_id": "ml_engineer",
+      "required_skills": [
+        {
+          "skill_id": "python",
+          "level": 80
+        },
+        {
+          "skill_id": "machine_learning",
+          "level": 75
+        },
+        {
+          "skill_id": "scikit_learn",
+          "level": 70
+        },
+        {
+          "skill_id": "mlops",
+          "level": 60
+        },
+        {
+          "skill_id": "docker",
+          "level": 60
+        },
+        {
+          "skill_id": "sql",
+          "level": 65
+        }
+      ],
+      "preferred_skills": [
+        "mlflow",
+        "pytorch",
+        "ci_cd_pipelines"
+      ],
+      "description": "Train, ship and monitor risk models, owning pipelines from feature work to deployment."
+    },
+    {
+      "id": "demo-data-scientist-1",
+      "title": "Junior Data Scientist",
+      "company": "Sample Co. — Retail Analytics",
+      "location": "Hyderabad, India",
+      "employment_type": "Full-time",
+      "role_id": "data_scientist",
+      "required_skills": [
+        {
+          "skill_id": "python",
+          "level": 70
+        },
+        {
+          "skill_id": "statistics",
+          "level": 70
+        },
+        {
+          "skill_id": "pandas",
+          "level": 70
+        },
+        {
+          "skill_id": "machine_learning",
+          "level": 60
+        },
+        {
+          "skill_id": "sql",
+          "level": 65
+        }
+      ],
+      "preferred_skills": [
+        "data_visualization",
+        "scikit_learn",
+        "exploratory_data_analysis"
+      ],
+      "description": "Analyze customer behaviour, build forecasting models and communicate findings to product teams."
+    },
+    {
+      "id": "demo-data-analyst-1",
+      "title": "Data Analyst",
+      "company": "Sample Co. — Logistics Group",
+      "location": "Gurugram, India",
+      "employment_type": "Full-time",
+      "role_id": "data_analyst",
+      "required_skills": [
+        {
+          "skill_id": "sql",
+          "level": 75
+        },
+        {
+          "skill_id": "excel",
+          "level": 70
+        },
+        {
+          "skill_id": "power_bi",
+          "level": 65
+        },
+        {
+          "skill_id": "data_analysis",
+          "level": 70
+        }
+      ],
+      "preferred_skills": [
+        "python",
+        "pandas",
+        "communication_skills"
+      ],
+      "description": "Own weekly operations dashboards and answer ad hoc questions from regional managers."
+    },
+    {
+      "id": "demo-data-engineer-1",
+      "title": "Data Engineer",
+      "company": "Sample Co. — Health Data",
+      "location": "Chennai, India",
+      "employment_type": "Full-time",
+      "role_id": "data_engineer",
+      "required_skills": [
+        {
+          "skill_id": "python",
+          "level": 75
+        },
+        {
+          "skill_id": "sql",
+          "level": 80
+        },
+        {
+          "skill_id": "pyspark",
+          "level": 65
+        },
+        {
+          "skill_id": "etl_pipelines",
+          "level": 70
+        },
+        {
+          "skill_id": "apache_airflow",
+          "level": 55
+        }
+      ],
+      "preferred_skills": [
+        "snowflake",
+        "docker",
+        "aws"
+      ],
+      "description": "Build batch pipelines that move clinical and operational data into the warehouse."
+    },
+    {
+      "id": "demo-backend-1",
+      "title": "Backend Developer (Java)",
+      "company": "Sample Co. — Payments",
+      "location": "Bengaluru, India",
+      "employment_type": "Full-time",
+      "role_id": "backend_developer",
+      "required_skills": [
+        {
+          "skill_id": "java",
+          "level": 75
+        },
+        {
+          "skill_id": "spring_boot",
+          "level": 70
+        },
+        {
+          "skill_id": "sql",
+          "level": 70
+        },
+        {
+          "skill_id": "rest_api",
+          "level": 75
+        },
+        {
+          "skill_id": "git",
+          "level": 65
+        }
+      ],
+      "preferred_skills": [
+        "microservices",
+        "docker",
+        "redis",
+        "postgresql"
+      ],
+      "description": "Design and maintain payment APIs with a focus on correctness and observability."
+    },
+    {
+      "id": "demo-backend-python-1",
+      "title": "Python Backend Developer",
+      "company": "Sample Co. — SaaS Tools",
+      "location": "Remote, India",
+      "employment_type": "Full-time",
+      "role_id": "backend_developer",
+      "required_skills": [
+        {
+          "skill_id": "python",
+          "level": 75
+        },
+        {
+          "skill_id": "fastapi",
+          "level": 60
+        },
+        {
+          "skill_id": "postgresql",
+          "level": 65
+        },
+        {
+          "skill_id": "rest_api",
+          "level": 70
+        },
+        {
+          "skill_id": "docker",
+          "level": 55
+        }
+      ],
+      "preferred_skills": [
+        "redis",
+        "git",
+        "aws"
+      ],
+      "description": "Build API services for an internal tooling product and keep them fast and well tested."
+    },
+    {
+      "id": "demo-fullstack-1",
+      "title": "Full Stack Developer",
+      "company": "Sample Co. — Community Apps",
+      "location": "Noida, India",
+      "employment_type": "Full-time",
+      "role_id": "full_stack_developer",
+      "required_skills": [
+        {
+          "skill_id": "javascript",
+          "level": 75
+        },
+        {
+          "skill_id": "react",
+          "level": 70
+        },
+        {
+          "skill_id": "node_js",
+          "level": 65
+        },
+        {
+          "skill_id": "sql",
+          "level": 60
+        },
+        {
+          "skill_id": "git",
+          "level": 65
+        }
+      ],
+      "preferred_skills": [
+        "typescript",
+        "mongodb",
+        "express_js"
+      ],
+      "description": "Ship features across a React frontend and Node.js services for a volunteer-matching platform."
+    },
+    {
+      "id": "demo-frontend-intern-1",
+      "title": "Frontend Developer Intern",
+      "company": "Sample Co. — Design Studio",
+      "location": "Mumbai, India",
+      "employment_type": "Internship",
+      "role_id": "frontend_developer",
+      "required_skills": [
+        {
+          "skill_id": "html5",
+          "level": 65
+        },
+        {
+          "skill_id": "css3",
+          "level": 65
+        },
+        {
+          "skill_id": "javascript",
+          "level": 60
+        },
+        {
+          "skill_id": "react",
+          "level": 50
+        }
+      ],
+      "preferred_skills": [
+        "typescript",
+        "tailwind_css",
+        "responsive_web_design"
+      ],
+      "description": "Turn design mockups into accessible, responsive React components."
+    },
+    {
+      "id": "demo-devops-1",
+      "title": "DevOps Engineer",
+      "company": "Sample Co. — Cloud Services",
+      "location": "Bengaluru, India",
+      "employment_type": "Full-time",
+      "role_id": "devops_engineer",
+      "required_skills": [
+        {
+          "skill_id": "linux_admin",
+          "level": 70
+        },
+        {
+          "skill_id": "docker",
+          "level": 70
+        },
+        {
+          "skill_id": "kubernetes",
+          "level": 60
+        },
+        {
+          "skill_id": "ci_cd_pipelines",
+          "level": 70
+        },
+        {
+          "skill_id": "aws",
+          "level": 60
+        }
+      ],
+      "preferred_skills": [
+        "terraform",
+        "prometheus",
+        "grafana",
+        "github_actions"
+      ],
+      "description": "Automate build and release pipelines and keep container platforms healthy."
+    },
+    {
+      "id": "demo-security-1",
+      "title": "Security Analyst (Associate)",
+      "company": "Sample Co. — SOC Services",
+      "location": "Hyderabad, India",
+      "employment_type": "Full-time",
+      "role_id": "cybersecurity_analyst",
+      "required_skills": [
+        {
+          "skill_id": "network_security",
+          "level": 65
+        },
+        {
+          "skill_id": "owasp_top_10",
+          "level": 60
+        },
+        {
+          "skill_id": "incident_response",
+          "level": 55
+        },
+        {
+          "skill_id": "siem",
+          "level": 55
+        }
+      ],
+      "preferred_skills": [
+        "wireshark",
+        "burp_suite",
+        "linux_admin"
+      ],
+      "description": "Triage alerts, investigate incidents and help harden customer web applications."
+    },
+    {
+      "id": "demo-uiux-1",
+      "title": "UI/UX Designer",
+      "company": "Sample Co. — Consumer Apps",
+      "location": "Remote, India",
+      "employment_type": "Contract",
+      "role_id": "ui_ux_designer",
+      "required_skills": [
+        {
+          "skill_id": "figma",
+          "level": 75
+        },
+        {
+          "skill_id": "ui_design",
+          "level": 70
+        },
+        {
+          "skill_id": "ux_research",
+          "level": 60
+        },
+        {
+          "skill_id": "wireframing",
+          "level": 65
+        }
+      ],
+      "preferred_skills": [
+        "design_systems",
+        "usability_testing",
+        "interaction_design"
+      ],
+      "description": "Research, prototype and test flows for a vernacular-language consumer app."
+    },
+    {
+      "id": "demo-qa-1",
+      "title": "QA Automation Engineer",
+      "company": "Sample Co. — E-commerce",
+      "location": "Pune, India",
+      "employment_type": "Full-time",
+      "role_id": "qa_automation_engineer",
+      "required_skills": [
+        {
+          "skill_id": "automated_testing",
+          "level": 70
+        },
+        {
+          "skill_id": "selenium",
+          "level": 65
+        },
+        {
+          "skill_id": "postman",
+          "level": 60
+        },
+        {
+          "skill_id": "python",
+          "level": 55
+        }
+      ],
+      "preferred_skills": [
+        "cypress",
+        "ci_cd_pipelines",
+        "git"
+      ],
+      "description": "Build and maintain end-to-end and API test suites for checkout and payments."
+    }
+  ]
+}

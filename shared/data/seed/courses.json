@@ -1,0 +1,766 @@
+{
+  "_meta": {
+    "kind": "seeded_demo_catalog",
+    "note": "Curated starter catalog for local development. Links point to public learning resources; durations and levels are SkillVeda editorial estimates, not provider claims. skills_taught lists only skills the resource covers directly.",
+    "version": 1
+  },
+  "courses": [
+    {
+      "id": "ml-specialization",
+      "title": "Machine Learning Specialization",
+      "provider": "DeepLearning.AI / Coursera",
+      "url": "https://www.coursera.org/specializations/machine-learning-introduction",
+      "skills_taught": [
+        "machine_learning",
+        "python",
+        "scikit_learn"
+      ],
+      "level": "beginner",
+      "duration_weeks": 10,
+      "cost": "free_audit",
+      "description": "Supervised and unsupervised learning fundamentals, regression, classification, trees and practical advice for building models."
+    },
+    {
+      "id": "kaggle-intro-ml",
+      "title": "Intro to Machine Learning",
+      "provider": "Kaggle Learn",
+      "url": "https://www.kaggle.com/learn/intro-to-machine-learning",
+      "skills_taught": [
+        "machine_learning",
+        "scikit_learn"
+      ],
+      "level": "beginner",
+      "duration_weeks": 1,
+      "cost": "free",
+      "description": "Short hands-on notebooks: build and validate your first decision tree and random forest models."
+    },
+    {
+      "id": "dl-specialization",
+      "title": "Deep Learning Specialization",
+      "provider": "DeepLearning.AI / Coursera",
+      "url": "https://www.coursera.org/specializations/deep-learning",
+      "skills_taught": [
+        "deep_learning",
+        "machine_learning"
+      ],
+      "level": "intermediate",
+      "duration_weeks": 12,
+      "cost": "free_audit",
+      "description": "Neural networks, optimization, CNNs and sequence models, with the reasoning behind common training choices."
+    },
+    {
+      "id": "fastai-practical-dl",
+      "title": "Practical Deep Learning for Coders",
+      "provider": "fast.ai",
+      "url": "https://course.fast.ai/",
+      "skills_taught": [
+        "deep_learning",
+        "pytorch",
+        "computer_vision"
+      ],
+      "level": "intermediate",
+      "duration_weeks": 8,
+      "cost": "free",
+      "description": "Top-down, code-first deep learning built on PyTorch, from image models to deployment."
+    },
+    {
+      "id": "pytorch-basics",
+      "title": "Learn the Basics (PyTorch Tutorials)",
+      "provider": "PyTorch",
+      "url": "https://pytorch.org/tutorials/beginner/basics/intro.html",
+      "skills_taught": [
+        "pytorch"
+      ],
+      "level": "beginner",
+      "duration_weeks": 2,
+      "cost": "free",
+      "description": "Official walkthrough of tensors, datasets, models, autograd, training loops and saving models."
+    },
+    {
+      "id": "hf-llm-course",
+      "title": "LLM Course",
+      "provider": "Hugging Face",
+      "url": "https://huggingface.co/learn/llm-course",
+      "skills_taught": [
+        "large_language_models",
+        "huggingface_transformers",
+        "nlp",
+        "fine_tuning_llms"
+      ],
+      "level": "intermediate",
+      "duration_weeks": 6,
+      "cost": "free",
+      "description": "Transformers, tokenizers, datasets and fine-tuning with the Hugging Face ecosystem."
+    },
+    {
+      "id": "dlai-prompting",
+      "title": "ChatGPT Prompt Engineering for Developers",
+      "provider": "DeepLearning.AI",
+      "url": "https://www.deeplearning.ai/short-courses/chatgpt-prompt-engineering-for-developers/",
+      "skills_taught": [
+        "prompt_engineering",
+        "large_language_models"
+      ],
+      "level": "beginner",
+      "duration_weeks": 1,
+      "cost": "free",
+      "description": "Short course on writing clear prompts and building simple LLM-powered applications."
+    },
+    {
+      "id": "dlai-genai-for-everyone",
+      "title": "Generative AI for Everyone",
+      "provider": "DeepLearning.AI / Coursera",
+      "url": "https://www.coursera.org/learn/generative-ai-for-everyone",
+      "skills_taught": [
+        "generative_ai"
+      ],
+      "level": "beginner",
+      "duration_weeks": 3,
+      "cost": "free_audit",
+      "description": "What generative AI can and cannot do, common project patterns and how teams adopt it."
+    },
+    {
+      "id": "langchain-tutorials",
+      "title": "LangChain Tutorials",
+      "provider": "LangChain Docs",
+      "url": "https://python.langchain.com/docs/tutorials/",
+      "skills_taught": [
+        "langchain",
+        "rag_systems",
+        "vector_databases"
+      ],
+      "level": "intermediate",
+      "duration_weeks": 3,
+      "cost": "free",
+      "description": "Official tutorials covering chains, retrieval, building a RAG app and agents."
+    },
+    {
+      "id": "dlai-langchain-chat-data",
+      "title": "LangChain: Chat with Your Data",
+      "provider": "DeepLearning.AI",
+      "url": "https://www.deeplearning.ai/short-courses/langchain-chat-with-your-data/",
+      "skills_taught": [
+        "rag_systems",
+        "langchain",
+        "vector_databases"
+      ],
+      "level": "intermediate",
+      "duration_weeks": 1,
+      "cost": "free",
+      "description": "Document loading, splitting, embeddings, vector stores and retrieval for question answering."
+    },
+    {
+      "id": "made-with-ml",
+      "title": "Made With ML",
+      "provider": "Made With ML",
+      "url": "https://madewithml.com/",
+      "skills_taught": [
+        "mlops",
+        "machine_learning",
+        "python"
+      ],
+      "level": "advanced",
+      "duration_weeks": 8,
+      "cost": "free",
+      "description": "Design, develop, deploy and iterate on production ML systems, including testing and orchestration."
+    },
+    {
+      "id": "mlflow-docs",
+      "title": "MLflow Tutorials and Guides",
+      "provider": "MLflow",
+      "url": "https://mlflow.org/docs/latest/",
+      "skills_taught": [
+        "mlflow",
+        "mlops"
+      ],
+      "level": "intermediate",
+      "duration_weeks": 2,
+      "cost": "free",
+      "description": "Experiment tracking, model registry and deployment workflows with MLflow."
+    },
+    {
+      "id": "khan-statistics",
+      "title": "Statistics and Probability",
+      "provider": "Khan Academy",
+      "url": "https://www.khanacademy.org/math/statistics-probability",
+      "skills_taught": [
+        "statistics"
+      ],
+      "level": "beginner",
+      "duration_weeks": 8,
+      "cost": "free",
+      "description": "Descriptive statistics, probability, distributions, sampling and inference."
+    },
+    {
+      "id": "kaggle-pandas",
+      "title": "Pandas",
+      "provider": "Kaggle Learn",
+      "url": "https://www.kaggle.com/learn/pandas",
+      "skills_taught": [
+        "pandas",
+        "python"
+      ],
+      "level": "beginner",
+      "duration_weeks": 1,
+      "cost": "free",
+      "description": "Indexing, grouping, sorting, data types and combining data with pandas."
+    },
+    {
+      "id": "kaggle-data-viz",
+      "title": "Data Visualization",
+      "provider": "Kaggle Learn",
+      "url": "https://www.kaggle.com/learn/data-visualization",
+      "skills_taught": [
+        "data_visualization",
+        "seaborn"
+      ],
+      "level": "beginner",
+      "duration_weeks": 1,
+      "cost": "free",
+      "description": "Line, bar, scatter and distribution charts with seaborn."
+    },
+    {
+      "id": "kaggle-sql",
+      "title": "Intro to SQL",
+      "provider": "Kaggle Learn",
+      "url": "https://www.kaggle.com/learn/intro-to-sql",
+      "skills_taught": [
+        "sql"
+      ],
+      "level": "beginner",
+      "duration_weeks": 1,
+      "cost": "free",
+      "description": "SELECT, WHERE, GROUP BY, ORDER BY and joins on real datasets."
+    },
+    {
+      "id": "google-data-analytics",
+      "title": "Google Data Analytics Professional Certificate",
+      "provider": "Google / Coursera",
+      "url": "https://www.coursera.org/professional-certificates/google-data-analytics",
+      "skills_taught": [
+        "data_analysis",
+        "sql",
+        "data_visualization",
+        "tableau",
+        "excel"
+      ],
+      "level": "beginner",
+      "duration_weeks": 24,
+      "cost": "paid",
+      "description": "End-to-end analytics workflow: ask, prepare, process, analyze, share and act."
+    },
+    {
+      "id": "ms-learn-power-bi",
+      "title": "Power BI Learning Paths",
+      "provider": "Microsoft Learn",
+      "url": "https://learn.microsoft.com/en-us/training/powerplatform/power-bi",
+      "skills_taught": [
+        "power_bi",
+        "data_visualization"
+      ],
+      "level": "beginner",
+      "duration_weeks": 4,
+      "cost": "free",
+      "description": "Connect to data, model it and build reports and dashboards in Power BI."
+    },
+    {
+      "id": "spark-quick-start",
+      "title": "Spark Quick Start and Programming Guides",
+      "provider": "Apache Spark",
+      "url": "https://spark.apache.org/docs/latest/quick-start.html",
+      "skills_taught": [
+        "apache_spark",
+        "pyspark"
+      ],
+      "level": "intermediate",
+      "duration_weeks": 3,
+      "cost": "free",
+      "description": "Official guides for the Spark shell, DataFrames, Spark SQL and self-contained PySpark apps."
+    },
+    {
+      "id": "airflow-tutorial",
+      "title": "Airflow Tutorials",
+      "provider": "Apache Airflow",
+      "url": "https://airflow.apache.org/docs/apache-airflow/stable/tutorial/index.html",
+      "skills_taught": [
+        "apache_airflow",
+        "etl_pipelines"
+      ],
+      "level": "intermediate",
+      "duration_weeks": 2,
+      "cost": "free",
+      "description": "Write DAGs, schedule tasks and build a simple data pipeline."
+    },
+    {
+      "id": "fcc-responsive-web",
+      "title": "Responsive Web Design",
+      "provider": "freeCodeCamp",
+      "url": "https://www.freecodecamp.org/learn/2022/responsive-web-design/",
+      "skills_taught": [
+        "html5",
+        "css3",
+        "responsive_web_design"
+      ],
+      "level": "beginner",
+      "duration_weeks": 6,
+      "cost": "free",
+      "description": "Project-based HTML and CSS, including flexbox, grid, accessibility and responsive layouts."
+    },
+    {
+      "id": "fcc-javascript",
+      "title": "JavaScript Algorithms and Data Structures",
+      "provider": "freeCodeCamp",
+      "url": "https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures-v8/",
+      "skills_taught": [
+        "javascript"
+      ],
+      "level": "beginner",
+      "duration_weeks": 8,
+      "cost": "free",
+      "description": "Core JavaScript through small projects: data types, functions, DOM work and problem solving."
+    },
+    {
+      "id": "ts-handbook",
+      "title": "The TypeScript Handbook",
+      "provider": "TypeScript",
+      "url": "https://www.typescriptlang.org/docs/handbook/intro.html",
+      "skills_taught": [
+        "typescript"
+      ],
+      "level": "intermediate",
+      "duration_weeks": 2,
+      "cost": "free",
+      "description": "Official guide to TypeScript's type system for everyday programming."
+    },
+    {
+      "id": "react-learn",
+      "title": "Learn React",
+      "provider": "React",
+      "url": "https://react.dev/learn",
+      "skills_taught": [
+        "react"
+      ],
+      "level": "beginner",
+      "duration_weeks": 3,
+      "cost": "free",
+      "description": "Official course on components, state, effects and thinking in React."
+    },
+    {
+      "id": "nextjs-learn",
+      "title": "Next.js Learn",
+      "provider": "Vercel",
+      "url": "https://nextjs.org/learn",
+      "skills_taught": [
+        "next_js",
+        "react"
+      ],
+      "level": "intermediate",
+      "duration_weeks": 2,
+      "cost": "free",
+      "description": "Build a full-stack dashboard app with the App Router, data fetching and deployment."
+    },
+    {
+      "id": "tailwind-docs",
+      "title": "Tailwind CSS Core Concepts",
+      "provider": "Tailwind Labs",
+      "url": "https://tailwindcss.com/docs/styling-with-utility-classes",
+      "skills_taught": [
+        "tailwind_css"
+      ],
+      "level": "beginner",
+      "duration_weeks": 1,
+      "cost": "free",
+      "description": "Utility-first styling, responsive design and state variants."
+    },
+    {
+      "id": "redux-essentials",
+      "title": "Redux Essentials",
+      "provider": "Redux",
+      "url": "https://redux.js.org/tutorials/essentials/part-1-overview-concepts",
+      "skills_taught": [
+        "redux"
+      ],
+      "level": "intermediate",
+      "duration_weeks": 2,
+      "cost": "free",
+      "description": "Official tutorial for Redux Toolkit and modern Redux patterns."
+    },
+    {
+      "id": "nodejs-learn",
+      "title": "Learn Node.js",
+      "provider": "Node.js",
+      "url": "https://nodejs.org/en/learn/getting-started/introduction-to-nodejs",
+      "skills_taught": [
+        "node_js"
+      ],
+      "level": "beginner",
+      "duration_weeks": 2,
+      "cost": "free",
+      "description": "Official introduction to the Node.js runtime, modules, async work and the file system."
+    },
+    {
+      "id": "express-guide",
+      "title": "Express Getting Started and Guide",
+      "provider": "Express",
+      "url": "https://expressjs.com/en/starter/installing.html",
+      "skills_taught": [
+        "express_js",
+        "rest_api"
+      ],
+      "level": "beginner",
+      "duration_weeks": 1,
+      "cost": "free",
+      "description": "Routing, middleware and error handling for web APIs in Express."
+    },
+    {
+      "id": "mongodb-university",
+      "title": "MongoDB University Learning Paths",
+      "provider": "MongoDB",
+      "url": "https://learn.mongodb.com/",
+      "skills_taught": [
+        "mongodb"
+      ],
+      "level": "beginner",
+      "duration_weeks": 3,
+      "cost": "free",
+      "description": "Data modeling, CRUD, indexes and aggregation with MongoDB."
+    },
+    {
+      "id": "postgres-tutorial",
+      "title": "PostgreSQL Tutorial",
+      "provider": "PostgreSQL Docs",
+      "url": "https://www.postgresql.org/docs/current/tutorial.html",
+      "skills_taught": [
+        "postgresql",
+        "sql"
+      ],
+      "level": "beginner",
+      "duration_weeks": 2,
+      "cost": "free",
+      "description": "Official tutorial covering tables, queries, joins, transactions and advanced features."
+    },
+    {
+      "id": "redis-university",
+      "title": "Redis University",
+      "provider": "Redis",
+      "url": "https://university.redis.io/",
+      "skills_taught": [
+        "redis"
+      ],
+      "level": "beginner",
+      "duration_weeks": 2,
+      "cost": "free",
+      "description": "Data structures, caching patterns and running Redis in applications."
+    },
+    {
+      "id": "dev-java-learn",
+      "title": "Learn Java",
+      "provider": "dev.java",
+      "url": "https://dev.java/learn/",
+      "skills_taught": [
+        "java"
+      ],
+      "level": "beginner",
+      "duration_weeks": 6,
+      "cost": "free",
+      "description": "Official Java tutorials from language basics to collections, streams and modules."
+    },
+    {
+      "id": "spring-guides",
+      "title": "Spring Boot Guides",
+      "provider": "Spring",
+      "url": "https://spring.io/guides",
+      "skills_taught": [
+        "spring_boot",
+        "rest_api",
+        "microservices"
+      ],
+      "level": "intermediate",
+      "duration_weeks": 4,
+      "cost": "free",
+      "description": "Task-focused guides for REST services, data access, security and microservices with Spring Boot."
+    },
+    {
+      "id": "git-book",
+      "title": "Pro Git",
+      "provider": "git-scm.com",
+      "url": "https://git-scm.com/book/en/v2",
+      "skills_taught": [
+        "git"
+      ],
+      "level": "beginner",
+      "duration_weeks": 2,
+      "cost": "free",
+      "description": "The full Pro Git book: basics, branching, remotes and Git internals."
+    },
+    {
+      "id": "docker-get-started",
+      "title": "Docker Get Started",
+      "provider": "Docker Docs",
+      "url": "https://docs.docker.com/get-started/",
+      "skills_taught": [
+        "docker"
+      ],
+      "level": "beginner",
+      "duration_weeks": 1,
+      "cost": "free",
+      "description": "Containers, images, Dockerfiles, volumes and multi-container apps with Compose."
+    },
+    {
+      "id": "k8s-basics",
+      "title": "Learn Kubernetes Basics",
+      "provider": "Kubernetes Docs",
+      "url": "https://kubernetes.io/docs/tutorials/kubernetes-basics/",
+      "skills_taught": [
+        "kubernetes"
+      ],
+      "level": "intermediate",
+      "duration_weeks": 2,
+      "cost": "free",
+      "description": "Deploy, expose, scale and update an application on a Kubernetes cluster."
+    },
+    {
+      "id": "linux-journey",
+      "title": "Linux Journey",
+      "provider": "Linux Journey",
+      "url": "https://linuxjourney.com/",
+      "skills_taught": [
+        "linux_admin",
+        "shell_scripting"
+      ],
+      "level": "beginner",
+      "duration_weeks": 4,
+      "cost": "free",
+      "description": "Command line, text manipulation, permissions, processes, packages and networking."
+    },
+    {
+      "id": "github-actions-docs",
+      "title": "GitHub Actions Documentation",
+      "provider": "GitHub Docs",
+      "url": "https://docs.github.com/en/actions",
+      "skills_taught": [
+        "github_actions",
+        "ci_cd_pipelines"
+      ],
+      "level": "intermediate",
+      "duration_weeks": 1,
+      "cost": "free",
+      "description": "Workflows, jobs, runners and building CI/CD pipelines with GitHub Actions."
+    },
+    {
+      "id": "terraform-tutorials",
+      "title": "Terraform Tutorials",
+      "provider": "HashiCorp Developer",
+      "url": "https://developer.hashicorp.com/terraform/tutorials",
+      "skills_taught": [
+        "terraform"
+      ],
+      "level": "intermediate",
+      "duration_weeks": 2,
+      "cost": "free",
+      "description": "Infrastructure as code: providers, state, modules and cloud deployments."
+    },
+    {
+      "id": "aws-skill-builder",
+      "title": "AWS Skill Builder: Cloud Practitioner Essentials",
+      "provider": "AWS",
+      "url": "https://skillbuilder.aws/",
+      "skills_taught": [
+        "aws"
+      ],
+      "level": "beginner",
+      "duration_weeks": 2,
+      "cost": "free",
+      "description": "Core AWS services, global infrastructure, security and pricing concepts."
+    },
+    {
+      "id": "prometheus-docs",
+      "title": "Prometheus Getting Started",
+      "provider": "Prometheus Docs",
+      "url": "https://prometheus.io/docs/prometheus/latest/getting_started/",
+      "skills_taught": [
+        "prometheus"
+      ],
+      "level": "intermediate",
+      "duration_weeks": 1,
+      "cost": "free",
+      "description": "Install Prometheus, scrape targets and query metrics with PromQL."
+    },
+    {
+      "id": "grafana-tutorials",
+      "title": "Grafana Tutorials",
+      "provider": "Grafana Labs",
+      "url": "https://grafana.com/tutorials/",
+      "skills_taught": [
+        "grafana"
+      ],
+      "level": "beginner",
+      "duration_weeks": 1,
+      "cost": "free",
+      "description": "Build dashboards, explore data sources and set up alerting."
+    },
+    {
+      "id": "portswigger-academy",
+      "title": "Web Security Academy",
+      "provider": "PortSwigger",
+      "url": "https://portswigger.net/web-security",
+      "skills_taught": [
+        "application_security",
+        "burp_suite",
+        "penetration_testing",
+        "owasp_top_10"
+      ],
+      "level": "intermediate",
+      "duration_weeks": 8,
+      "cost": "free",
+      "description": "Interactive labs on web vulnerabilities such as SQL injection, XSS and access control."
+    },
+    {
+      "id": "owasp-top-ten",
+      "title": "OWASP Top 10",
+      "provider": "OWASP",
+      "url": "https://owasp.org/www-project-top-ten/",
+      "skills_taught": [
+        "owasp_top_10",
+        "application_security"
+      ],
+      "level": "beginner",
+      "duration_weeks": 1,
+      "cost": "free",
+      "description": "The standard awareness document for the most critical web application security risks."
+    },
+    {
+      "id": "google-ux-cert",
+      "title": "Google UX Design Professional Certificate",
+      "provider": "Google / Coursera",
+      "url": "https://www.coursera.org/professional-certificates/google-ux-design",
+      "skills_taught": [
+        "ux_research",
+        "wireframing",
+        "figma",
+        "usability_testing",
+        "ui_design"
+      ],
+      "level": "beginner",
+      "duration_weeks": 24,
+      "cost": "paid",
+      "description": "UX process from research and wireframes to high-fidelity prototypes and usability studies."
+    },
+    {
+      "id": "figma-learn",
+      "title": "Figma Learn",
+      "provider": "Figma",
+      "url": "https://help.figma.com/hc/en-us/categories/360002051613",
+      "skills_taught": [
+        "figma",
+        "design_systems"
+      ],
+      "level": "beginner",
+      "duration_weeks": 1,
+      "cost": "free",
+      "description": "Official Figma guides for design basics, components, variables and prototyping."
+    },
+    {
+      "id": "selenium-docs",
+      "title": "Selenium Documentation",
+      "provider": "Selenium",
+      "url": "https://www.selenium.dev/documentation/",
+      "skills_taught": [
+        "selenium",
+        "automated_testing"
+      ],
+      "level": "intermediate",
+      "duration_weeks": 2,
+      "cost": "free",
+      "description": "WebDriver, locating elements, waits and test practices for browser automation."
+    },
+    {
+      "id": "postman-learning",
+      "title": "Postman Learning Center",
+      "provider": "Postman",
+      "url": "https://learning.postman.com/",
+      "skills_taught": [
+        "postman",
+        "rest_api"
+      ],
+      "level": "beginner",
+      "duration_weeks": 1,
+      "cost": "free",
+      "description": "Send requests, write tests, use collections and automate API testing."
+    },
+    {
+      "id": "solidity-docs",
+      "title": "Solidity Documentation",
+      "provider": "Solidity",
+      "url": "https://docs.soliditylang.org/",
+      "skills_taught": [
+        "solidity",
+        "smart_contracts"
+      ],
+      "level": "intermediate",
+      "duration_weeks": 3,
+      "cost": "free",
+      "description": "Language reference and examples for writing Ethereum smart contracts."
+    },
+    {
+      "id": "ethereum-dev",
+      "title": "Ethereum Developer Docs",
+      "provider": "ethereum.org",
+      "url": "https://ethereum.org/en/developers/docs/",
+      "skills_taught": [
+        "ethereum",
+        "blockchain_fundamentals",
+        "smart_contracts"
+      ],
+      "level": "beginner",
+      "duration_weeks": 3,
+      "cost": "free",
+      "description": "Foundational topics: accounts, transactions, the EVM, gas and the smart contract stack."
+    },
+    {
+      "id": "android-compose",
+      "title": "Android Basics with Compose",
+      "provider": "Android Developers",
+      "url": "https://developer.android.com/courses/android-basics-compose/course",
+      "skills_taught": [
+        "android_development",
+        "kotlin",
+        "jetpack_compose",
+        "android_studio"
+      ],
+      "level": "beginner",
+      "duration_weeks": 8,
+      "cost": "free",
+      "description": "Build Android apps with Kotlin and Jetpack Compose, from first app to data and networking."
+    },
+    {
+      "id": "swiftui-tutorials",
+      "title": "SwiftUI Tutorials",
+      "provider": "Apple Developer",
+      "url": "https://developer.apple.com/tutorials/swiftui",
+      "skills_taught": [
+        "swiftui",
+        "swift",
+        "ios_development",
+        "xcode"
+      ],
+      "level": "beginner",
+      "duration_weeks": 3,
+      "cost": "free",
+      "description": "Build iOS apps with SwiftUI step by step in Xcode."
+    },
+    {
+      "id": "atlassian-agile",
+      "title": "Agile Coach",
+      "provider": "Atlassian",
+      "url": "https://www.atlassian.com/agile",
+      "skills_taught": [
+        "agile_scrum"
+      ],
+      "level": "beginner",
+      "duration_weeks": 1,
+      "cost": "free",
+      "description": "Scrum, kanban, sprints, estimation and agile team practices."
+    }
+  ]
+}

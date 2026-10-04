@@ -1,0 +1,2928 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "total_skills": 291,
+    "categories": [
+      "programming",
+      "web_frontend",
+      "web_backend",
+      "database",
+      "cloud",
+      "devops",
+      "ai_ml",
+      "data_science",
+      "mobile",
+      "cybersecurity",
+      "soft_skills",
+      "design",
+      "blockchain",
+      "testing"
+    ]
+  },
+  "skills": [
+    {
+      "id": "python",
+      "name": "Python",
+      "aliases": ["python", "python3", "python 3", "py", "python.org", "cpython"],
+      "category": "programming",
+      "prerequisites": [],
+      "related": ["django", "flask", "fastapi", "pandas", "numpy"],
+      "demand_weight": 0.91
+    },
+    {
+      "id": "java",
+      "name": "Java",
+      "aliases": ["java", "core java", "java 8", "java 11", "java 17", "java 21", "j2se", "jdk"],
+      "category": "programming",
+      "prerequisites": [],
+      "related": ["spring_boot", "spring_framework", "junit", "hibernate", "kotlin"],
+      "demand_weight": 0.88
+    },
+    {
+      "id": "javascript",
+      "name": "JavaScript",
+      "aliases": ["js", "javascript", "java script", "es6", "es2015", "ecmascript", "vanilla js"],
+      "category": "programming",
+      "prerequisites": ["html5", "css3"],
+      "related": ["typescript", "react", "node_js", "angular", "vue_js"],
+      "demand_weight": 0.89
+    },
+    {
+      "id": "typescript",
+      "name": "TypeScript",
+      "aliases": ["ts", "typescript", "type script"],
+      "category": "programming",
+      "prerequisites": ["javascript"],
+      "related": ["javascript", "react", "angular", "next_js", "nestjs"],
+      "demand_weight": 0.84
+    },
+    {
+      "id": "c",
+      "name": "C Language",
+      "aliases": ["c", "c lang", "c programming", "c-lang", "ansi c"],
+      "category": "programming",
+      "prerequisites": [],
+      "related": ["cpp", "linux_admin"],
+      "demand_weight": 0.65
+    },
+    {
+      "id": "cpp",
+      "name": "C++",
+      "aliases": ["c++", "cpp", "cplusplus", "c plus plus", "c++11", "c++14", "c++17", "c++20"],
+      "category": "programming",
+      "prerequisites": ["c"],
+      "related": ["c", "python"],
+      "demand_weight": 0.72
+    },
+    {
+      "id": "csharp",
+      "name": "C#",
+      "aliases": ["c#", "csharp", "c sharp", "c-sharp", "cs"],
+      "category": "programming",
+      "prerequisites": [],
+      "related": ["asp_net_core", "azure"],
+      "demand_weight": 0.75
+    },
+    {
+      "id": "go",
+      "name": "Go (Golang)",
+      "aliases": ["go", "golang", "go lang", "go-lang"],
+      "category": "programming",
+      "prerequisites": [],
+      "related": ["docker", "kubernetes", "gin", "microservices", "grpc"],
+      "demand_weight": 0.79
+    },
+    {
+      "id": "rust",
+      "name": "Rust",
+      "aliases": ["rust", "rust-lang", "rustlang"],
+      "category": "programming",
+      "prerequisites": ["c"],
+      "related": ["cpp", "webassembly", "blockchain_fundamentals", "solana"],
+      "demand_weight": 0.68
+    },
+    {
+      "id": "php",
+      "name": "PHP",
+      "aliases": ["php", "php7", "php8", "core php", "php-fpm"],
+      "category": "programming",
+      "prerequisites": [],
+      "related": ["laravel", "mysql", "html5"],
+      "demand_weight": 0.62
+    },
+    {
+      "id": "ruby",
+      "name": "Ruby",
+      "aliases": ["ruby", "ruby lang", "ruby-lang"],
+      "category": "programming",
+      "prerequisites": [],
+      "related": ["ruby_on_rails"],
+      "demand_weight": 0.52
+    },
+    {
+      "id": "kotlin",
+      "name": "Kotlin",
+      "aliases": ["kotlin", "kt", "kotlin-lang"],
+      "category": "programming",
+      "prerequisites": ["java"],
+      "related": ["android_development", "jetpack_compose", "java", "spring_boot"],
+      "demand_weight": 0.76
+    },
+    {
+      "id": "swift",
+      "name": "Swift",
+      "aliases": ["swift", "swift5", "apple swift", "swift-lang"],
+      "category": "programming",
+      "prerequisites": [],
+      "related": ["ios_development", "swiftui", "xcode", "uikit"],
+      "demand_weight": 0.73
+    },
+    {
+      "id": "scala",
+      "name": "Scala",
+      "aliases": ["scala", "scala3", "scala lang"],
+      "category": "programming",
+      "prerequisites": ["java"],
+      "related": ["apache_spark", "hadoop", "apache_kafka", "java"],
+      "demand_weight": 0.61
+    },
+    {
+      "id": "r",
+      "name": "R Language",
+      "aliases": ["r", "r lang", "r programming", "rlang"],
+      "category": "programming",
+      "prerequisites": [],
+      "related": ["statistics", "data_analysis", "machine_learning", "data_visualization"],
+      "demand_weight": 0.58
+    },
+    {
+      "id": "dart",
+      "name": "Dart",
+      "aliases": ["dart", "dart lang", "dartlang"],
+      "category": "programming",
+      "prerequisites": [],
+      "related": ["flutter"],
+      "demand_weight": 0.70
+    },
+    {
+      "id": "shell_scripting",
+      "name": "Bash / Shell Scripting",
+      "aliases": ["bash", "shell scripting", "shell script", "sh", "bash script", "zsh", "powershell", "shell"],
+      "category": "programming",
+      "prerequisites": [],
+      "related": ["linux_admin", "git", "docker"],
+      "demand_weight": 0.74
+    },
+    {
+      "id": "perl",
+      "name": "Perl",
+      "aliases": ["perl", "perl5", "perl script"],
+      "category": "programming",
+      "prerequisites": [],
+      "related": ["shell_scripting", "linux_admin"],
+      "demand_weight": 0.40
+    },
+    {
+      "id": "lua",
+      "name": "Lua",
+      "aliases": ["lua", "lua script", "luajit"],
+      "category": "programming",
+      "prerequisites": [],
+      "related": ["redis", "nginx"],
+      "demand_weight": 0.42
+    },
+    {
+      "id": "matlab",
+      "name": "MATLAB",
+      "aliases": ["matlab", "matrix laboratory", "simulink"],
+      "category": "programming",
+      "prerequisites": [],
+      "related": ["statistics", "scipy", "numpy", "computer_vision"],
+      "demand_weight": 0.50
+    },
+    {
+      "id": "groovy",
+      "name": "Groovy",
+      "aliases": ["groovy", "apache groovy"],
+      "category": "programming",
+      "prerequisites": ["java"],
+      "related": ["jenkins", "spring_boot"],
+      "demand_weight": 0.54
+    },
+    {
+      "id": "julia",
+      "name": "Julia",
+      "aliases": ["julia", "julia lang", "julialang"],
+      "category": "programming",
+      "prerequisites": [],
+      "related": ["python", "data_analysis", "machine_learning"],
+      "demand_weight": 0.46
+    },
+    {
+      "id": "elixir",
+      "name": "Elixir",
+      "aliases": ["elixir", "elixir lang"],
+      "category": "programming",
+      "prerequisites": [],
+      "related": ["websockets"],
+      "demand_weight": 0.45
+    },
+    {
+      "id": "haskell",
+      "name": "Haskell",
+      "aliases": ["haskell", "ghc"],
+      "category": "programming",
+      "prerequisites": [],
+      "related": ["scala"],
+      "demand_weight": 0.38
+    },
+    {
+      "id": "sql_programming",
+      "name": "SQL / PL-SQL",
+      "aliases": ["plsql", "pl/sql", "t-sql", "tsql", "pl-sql", "procedural sql"],
+      "category": "programming",
+      "prerequisites": ["sql"],
+      "related": ["oracle_db", "database_indexing", "ms_sql_server", "postgresql"],
+      "demand_weight": 0.76
+    },
+    {
+      "id": "html5",
+      "name": "HTML5",
+      "aliases": ["html", "html5", "hypertext markup language", "htm"],
+      "category": "web_frontend",
+      "prerequisites": [],
+      "related": ["css3", "javascript", "responsive_web_design", "semantic_html"],
+      "demand_weight": 0.88
+    },
+    {
+      "id": "css3",
+      "name": "CSS3",
+      "aliases": ["css", "css3", "cascading style sheets"],
+      "category": "web_frontend",
+      "prerequisites": ["html5"],
+      "related": ["html5", "tailwind_css", "sass", "bootstrap", "responsive_web_design"],
+      "demand_weight": 0.86
+    },
+    {
+      "id": "react",
+      "name": "React.js",
+      "aliases": ["react", "react.js", "reactjs", "react js"],
+      "category": "web_frontend",
+      "prerequisites": ["javascript", "html5", "css3"],
+      "related": ["next_js", "redux", "typescript", "tailwind_css", "vite"],
+      "demand_weight": 0.78
+    },
+    {
+      "id": "angular",
+      "name": "Angular",
+      "aliases": ["angular", "angularjs", "angular 2+", "angular 14", "angular 15", "angular 16", "angular 17"],
+      "category": "web_frontend",
+      "prerequisites": ["typescript", "javascript", "html5", "css3"],
+      "related": ["typescript", "rxjs"],
+      "demand_weight": 0.72
+    },
+    {
+      "id": "vue_js",
+      "name": "Vue.js",
+      "aliases": ["vue", "vue.js", "vuejs", "vue 3", "vue2", "vue3"],
+      "category": "web_frontend",
+      "prerequisites": ["javascript", "html5", "css3"],
+      "related": ["nuxt_js", "vite"],
+      "demand_weight": 0.65
+    },
+    {
+      "id": "next_js",
+      "name": "Next.js",
+      "aliases": ["next.js", "nextjs", "next js", "next"],
+      "category": "web_frontend",
+      "prerequisites": ["react", "javascript"],
+      "related": ["react", "tailwind_css", "typescript", "serverless_architecture"],
+      "demand_weight": 0.77
+    },
+    {
+      "id": "nuxt_js",
+      "name": "Nuxt.js",
+      "aliases": ["nuxt.js", "nuxt", "nuxtjs", "nuxt 3"],
+      "category": "web_frontend",
+      "prerequisites": ["vue_js", "javascript"],
+      "related": ["vue_js", "typescript"],
+      "demand_weight": 0.55
+    },
+    {
+      "id": "svelte",
+      "name": "Svelte",
+      "aliases": ["svelte", "sveltekit", "svelte.js", "sveltejs"],
+      "category": "web_frontend",
+      "prerequisites": ["javascript", "html5", "css3"],
+      "related": ["vite", "react", "vue_js"],
+      "demand_weight": 0.58
+    },
+    {
+      "id": "tailwind_css",
+      "name": "Tailwind CSS",
+      "aliases": ["tailwind", "tailwindcss", "tailwind-css"],
+      "category": "web_frontend",
+      "prerequisites": ["css3"],
+      "related": ["css3", "react", "next_js", "html5"],
+      "demand_weight": 0.81
+    },
+    {
+      "id": "bootstrap",
+      "name": "Bootstrap",
+      "aliases": ["bootstrap", "bootstrap 4", "bootstrap 5", "twitter bootstrap"],
+      "category": "web_frontend",
+      "prerequisites": ["css3", "html5"],
+      "related": ["css3", "html5", "jquery"],
+      "demand_weight": 0.70
+    },
+    {
+      "id": "sass",
+      "name": "Sass / SCSS",
+      "aliases": ["sass", "scss", "syntactically awesome stylesheets"],
+      "category": "web_frontend",
+      "prerequisites": ["css3"],
+      "related": ["css3", "bootstrap", "tailwind_css"],
+      "demand_weight": 0.66
+    },
+    {
+      "id": "redux",
+      "name": "Redux",
+      "aliases": ["redux", "redux toolkit", "rtk", "react-redux", "redux saga", "redux thunk"],
+      "category": "web_frontend",
+      "prerequisites": ["javascript", "react"],
+      "related": ["react", "mobx", "typescript"],
+      "demand_weight": 0.73
+    },
+    {
+      "id": "mobx",
+      "name": "MobX",
+      "aliases": ["mobx", "mobx-react", "mobx state tree"],
+      "category": "web_frontend",
+      "prerequisites": ["javascript", "react"],
+      "related": ["react", "redux"],
+      "demand_weight": 0.50
+    },
+    {
+      "id": "webpack",
+      "name": "Webpack",
+      "aliases": ["webpack", "webpack 5"],
+      "category": "web_frontend",
+      "prerequisites": ["javascript"],
+      "related": ["vite", "react"],
+      "demand_weight": 0.64
+    },
+    {
+      "id": "vite",
+      "name": "Vite",
+      "aliases": ["vite", "vitejs", "vite.js"],
+      "category": "web_frontend",
+      "prerequisites": ["javascript"],
+      "related": ["webpack", "react", "vue_js", "svelte"],
+      "demand_weight": 0.72
+    },
+    {
+      "id": "material_ui",
+      "name": "Material UI (MUI)",
+      "aliases": ["mui", "material-ui", "material ui", "material design"],
+      "category": "web_frontend",
+      "prerequisites": ["react"],
+      "related": ["react", "chakra_ui", "tailwind_css"],
+      "demand_weight": 0.70
+    },
+    {
+      "id": "chakra_ui",
+      "name": "Chakra UI",
+      "aliases": ["chakra", "chakra-ui", "chakra ui"],
+      "category": "web_frontend",
+      "prerequisites": ["react"],
+      "related": ["react", "tailwind_css", "material_ui"],
+      "demand_weight": 0.60
+    },
+    {
+      "id": "jquery",
+      "name": "jQuery",
+      "aliases": ["jquery", "jquery-ui", "j query"],
+      "category": "web_frontend",
+      "prerequisites": ["javascript"],
+      "related": ["javascript", "html5", "bootstrap"],
+      "demand_weight": 0.55
+    },
+    {
+      "id": "webassembly",
+      "name": "WebAssembly",
+      "aliases": ["wasm", "web assembly", "webassembly"],
+      "category": "web_frontend",
+      "prerequisites": ["javascript"],
+      "related": ["rust", "cpp", "c"],
+      "demand_weight": 0.52
+    },
+    {
+      "id": "semantic_html",
+      "name": "Semantic HTML",
+      "aliases": ["semantic html", "accessibility", "a11y", "web accessibility"],
+      "category": "web_frontend",
+      "prerequisites": ["html5"],
+      "related": ["html5", "responsive_web_design", "css3"],
+      "demand_weight": 0.72
+    },
+    {
+      "id": "responsive_web_design",
+      "name": "Responsive Web Design",
+      "aliases": ["responsive design", "rwd", "mobile first design", "mobile responsive"],
+      "category": "web_frontend",
+      "prerequisites": ["html5", "css3"],
+      "related": ["css3", "bootstrap", "tailwind_css"],
+      "demand_weight": 0.83
+    },
+    {
+      "id": "webgl",
+      "name": "WebGL",
+      "aliases": ["webgl", "web gl", "web graphics library"],
+      "category": "web_frontend",
+      "prerequisites": ["javascript"],
+      "related": ["three_js", "webassembly"],
+      "demand_weight": 0.50
+    },
+    {
+      "id": "three_js",
+      "name": "Three.js",
+      "aliases": ["three.js", "threejs", "three js"],
+      "category": "web_frontend",
+      "prerequisites": ["javascript", "webgl"],
+      "related": ["webgl", "javascript"],
+      "demand_weight": 0.56
+    },
+    {
+      "id": "storybook",
+      "name": "Storybook",
+      "aliases": ["storybook", "storybook.js", "storybookjs"],
+      "category": "web_frontend",
+      "prerequisites": ["react"],
+      "related": ["design_systems", "react", "vue_js"],
+      "demand_weight": 0.62
+    },
+    {
+      "id": "styled_components",
+      "name": "Styled Components",
+      "aliases": ["styled-components", "styled components", "css-in-js", "emotion"],
+      "category": "web_frontend",
+      "prerequisites": ["react", "css3"],
+      "related": ["react", "css3", "tailwind_css"],
+      "demand_weight": 0.64
+    },
+    {
+      "id": "rxjs",
+      "name": "RxJS",
+      "aliases": ["rxjs", "reactive extensions", "rx-js"],
+      "category": "web_frontend",
+      "prerequisites": ["javascript"],
+      "related": ["angular", "typescript"],
+      "demand_weight": 0.61
+    },
+    {
+      "id": "node_js",
+      "name": "Node.js",
+      "aliases": ["node", "nodejs", "node.js", "node js"],
+      "category": "web_backend",
+      "prerequisites": ["javascript"],
+      "related": ["express_js", "nestjs", "typescript", "rest_api"],
+      "demand_weight": 0.85
+    },
+    {
+      "id": "express_js",
+      "name": "Express.js",
+      "aliases": ["express", "expressjs", "express.js", "express js"],
+      "category": "web_backend",
+      "prerequisites": ["node_js"],
+      "related": ["node_js", "nestjs", "rest_api", "mongodb"],
+      "demand_weight": 0.82
+    },
+    {
+      "id": "nestjs",
+      "name": "NestJS",
+      "aliases": ["nest", "nestjs", "nest.js", "nest js"],
+      "category": "web_backend",
+      "prerequisites": ["node_js", "typescript"],
+      "related": ["node_js", "typescript", "express_js", "microservices"],
+      "demand_weight": 0.74
+    },
+    {
+      "id": "django",
+      "name": "Django",
+      "aliases": ["django", "django framework", "django rest framework", "drf"],
+      "category": "web_backend",
+      "prerequisites": ["python"],
+      "related": ["python", "flask", "fastapi", "postgresql"],
+      "demand_weight": 0.80
+    },
+    {
+      "id": "flask",
+      "name": "Flask",
+      "aliases": ["flask", "flask framework", "pyflask"],
+      "category": "web_backend",
+      "prerequisites": ["python"],
+      "related": ["python", "django", "fastapi", "rest_api"],
+      "demand_weight": 0.72
+    },
+    {
+      "id": "fastapi",
+      "name": "FastAPI",
+      "aliases": ["fastapi", "fast api", "fast-api"],
+      "category": "web_backend",
+      "prerequisites": ["python"],
+      "related": ["python", "flask", "django", "rest_api"],
+      "demand_weight": 0.76
+    },
+    {
+      "id": "spring_boot",
+      "name": "Spring Boot",
+      "aliases": ["spring boot", "springboot", "spring-boot", "spring framework"],
+      "category": "web_backend",
+      "prerequisites": ["java"],
+      "related": ["java", "spring_framework", "microservices", "hibernate", "rest_api"],
+      "demand_weight": 0.83
+    },
+    {
+      "id": "spring_framework",
+      "name": "Spring Framework",
+      "aliases": ["spring", "spring mvc", "spring core", "spring security"],
+      "category": "web_backend",
+      "prerequisites": ["java"],
+      "related": ["spring_boot", "java", "hibernate"],
+      "demand_weight": 0.78
+    },
+    {
+      "id": "asp_net_core",
+      "name": "ASP.NET Core",
+      "aliases": ["asp.net", "asp.net core", "aspnet", "aspnetcore", "dot net core", ".net core"],
+      "category": "web_backend",
+      "prerequisites": ["csharp"],
+      "related": ["csharp", "rest_api", "microservices"],
+      "demand_weight": 0.76
+    },
+    {
+      "id": "ruby_on_rails",
+      "name": "Ruby on Rails",
+      "aliases": ["rails", "ruby on rails", "ror"],
+      "category": "web_backend",
+      "prerequisites": ["ruby"],
+      "related": ["ruby", "postgresql", "rest_api"],
+      "demand_weight": 0.54
+    },
+    {
+      "id": "laravel",
+      "name": "Laravel",
+      "aliases": ["laravel", "laravel framework", "artisan"],
+      "category": "web_backend",
+      "prerequisites": ["php"],
+      "related": ["php", "mysql", "rest_api"],
+      "demand_weight": 0.67
+    },
+    {
+      "id": "gin",
+      "name": "Gin (Go Web Framework)",
+      "aliases": ["gin", "gin-gonic", "gin framework"],
+      "category": "web_backend",
+      "prerequisites": ["go"],
+      "related": ["go", "fiber", "rest_api", "microservices"],
+      "demand_weight": 0.65
+    },
+    {
+      "id": "fiber",
+      "name": "Fiber (Go)",
+      "aliases": ["fiber", "gofiber", "fiber framework"],
+      "category": "web_backend",
+      "prerequisites": ["go"],
+      "related": ["go", "gin", "rest_api"],
+      "demand_weight": 0.58
+    },
+    {
+      "id": "graphql",
+      "name": "GraphQL",
+      "aliases": ["graphql", "graph ql", "apollo graphql", "apollo server", "relay"],
+      "category": "web_backend",
+      "prerequisites": ["rest_api"],
+      "related": ["rest_api", "node_js", "react"],
+      "demand_weight": 0.73
+    },
+    {
+      "id": "rest_api",
+      "name": "RESTful APIs",
+      "aliases": ["rest", "rest api", "restful", "restful api", "rest apis", "restful web services"],
+      "category": "web_backend",
+      "prerequisites": [],
+      "related": ["graphql", "grpc", "api_gateway", "postman"],
+      "demand_weight": 0.88
+    },
+    {
+      "id": "grpc",
+      "name": "gRPC",
+      "aliases": ["grpc", "g-rpc", "protobuf", "protocol buffers"],
+      "category": "web_backend",
+      "prerequisites": [],
+      "related": ["microservices", "rest_api", "go", "java"],
+      "demand_weight": 0.69
+    },
+    {
+      "id": "microservices",
+      "name": "Microservices Architecture",
+      "aliases": ["microservices", "microservice", "microservices architecture", "msa", "distributed systems"],
+      "category": "web_backend",
+      "prerequisites": ["rest_api"],
+      "related": ["docker", "kubernetes", "api_gateway", "apache_kafka", "spring_boot"],
+      "demand_weight": 0.85
+    },
+    {
+      "id": "websockets",
+      "name": "WebSockets",
+      "aliases": ["websocket", "websockets", "socket.io", "ws", "socketio"],
+      "category": "web_backend",
+      "prerequisites": [],
+      "related": ["node_js", "fastapi"],
+      "demand_weight": 0.68
+    },
+    {
+      "id": "apache_kafka",
+      "name": "Apache Kafka",
+      "aliases": ["kafka", "apache kafka", "kafka streams", "confluent kafka"],
+      "category": "web_backend",
+      "prerequisites": [],
+      "related": ["rabbitmq", "microservices"],
+      "demand_weight": 0.81
+    },
+    {
+      "id": "rabbitmq",
+      "name": "RabbitMQ",
+      "aliases": ["rabbitmq", "rabbit mq", "amqp"],
+      "category": "web_backend",
+      "prerequisites": [],
+      "related": ["apache_kafka", "celery", "microservices"],
+      "demand_weight": 0.72
+    },
+    {
+      "id": "celery",
+      "name": "Celery",
+      "aliases": ["celery", "celery worker", "python celery"],
+      "category": "web_backend",
+      "prerequisites": ["python"],
+      "related": ["python", "redis", "rabbitmq", "django"],
+      "demand_weight": 0.66
+    },
+    {
+      "id": "jwt",
+      "name": "JSON Web Tokens (JWT)",
+      "aliases": ["jwt", "json web token", "json web tokens"],
+      "category": "web_backend",
+      "prerequisites": [],
+      "related": ["oauth2", "rest_api"],
+      "demand_weight": 0.78
+    },
+    {
+      "id": "oauth2",
+      "name": "OAuth 2.0",
+      "aliases": ["oauth", "oauth2", "oauth 2.0", "open id connect", "oidc"],
+      "category": "web_backend",
+      "prerequisites": [],
+      "related": ["jwt", "api_gateway"],
+      "demand_weight": 0.76
+    },
+    {
+      "id": "api_gateway",
+      "name": "API Gateway",
+      "aliases": ["api gateway", "kong", "apigee", "aws api gateway", "zuul", "traefik"],
+      "category": "web_backend",
+      "prerequisites": ["rest_api"],
+      "related": ["microservices", "aws", "nginx", "rest_api"],
+      "demand_weight": 0.74
+    },
+    {
+      "id": "hibernate",
+      "name": "Hibernate ORM",
+      "aliases": ["hibernate", "hibernate orm", "jpa", "java persistence api"],
+      "category": "web_backend",
+      "prerequisites": ["java", "sql"],
+      "related": ["spring_boot", "spring_framework", "java", "sql"],
+      "demand_weight": 0.71
+    },
+    {
+      "id": "sql",
+      "name": "SQL",
+      "aliases": ["sql", "structured query language", "ansi sql", "rdbms"],
+      "category": "database",
+      "prerequisites": [],
+      "related": ["postgresql", "mysql", "oracle_db", "database_indexing"],
+      "demand_weight": 0.87
+    },
+    {
+      "id": "postgresql",
+      "name": "PostgreSQL",
+      "aliases": ["postgres", "postgresql", "postgre", "psql", "postgressql", "postgres sql"],
+      "category": "database",
+      "prerequisites": ["sql"],
+      "related": ["sql", "mysql", "database_indexing", "redis"],
+      "demand_weight": 0.80
+    },
+    {
+      "id": "mysql",
+      "name": "MySQL",
+      "aliases": ["mysql", "my sql", "mariadb"],
+      "category": "database",
+      "prerequisites": ["sql"],
+      "related": ["sql", "postgresql", "php", "database_indexing"],
+      "demand_weight": 0.82
+    },
+    {
+      "id": "sqlite",
+      "name": "SQLite",
+      "aliases": ["sqlite", "sqlite3", "sqllite"],
+      "category": "database",
+      "prerequisites": ["sql"],
+      "related": ["sql", "android_development", "python"],
+      "demand_weight": 0.68
+    },
+    {
+      "id": "oracle_db",
+      "name": "Oracle Database",
+      "aliases": ["oracle", "oracle db", "oracle database", "plsql", "oracle 19c"],
+      "category": "database",
+      "prerequisites": ["sql"],
+      "related": ["sql", "sql_programming", "database_indexing"],
+      "demand_weight": 0.75
+    },
+    {
+      "id": "ms_sql_server",
+      "name": "Microsoft SQL Server",
+      "aliases": ["sql server", "mssql", "ms sql server", "t-sql", "ssms"],
+      "category": "database",
+      "prerequisites": ["sql"],
+      "related": ["sql", "csharp", "asp_net_core"],
+      "demand_weight": 0.74
+    },
+    {
+      "id": "mongodb",
+      "name": "MongoDB",
+      "aliases": ["mongodb", "mongo", "mongo db", "nosql", "mongoose"],
+      "category": "database",
+      "prerequisites": [],
+      "related": ["redis", "node_js", "express_js", "nosql"],
+      "demand_weight": 0.80
+    },
+    {
+      "id": "redis",
+      "name": "Redis",
+      "aliases": ["redis", "redis cache", "redis db", "key-value store", "in-memory database"],
+      "category": "database",
+      "prerequisites": [],
+      "related": ["postgresql", "mongodb", "celery", "microservices"],
+      "demand_weight": 0.79
+    },
+    {
+      "id": "cassandra",
+      "name": "Apache Cassandra",
+      "aliases": ["cassandra", "apache cassandra", "cql"],
+      "category": "database",
+      "prerequisites": [],
+      "related": ["nosql", "apache_kafka"],
+      "demand_weight": 0.65
+    },
+    {
+      "id": "elasticsearch",
+      "name": "Elasticsearch",
+      "aliases": ["elasticsearch", "elastic search", "es", "elk"],
+      "category": "database",
+      "prerequisites": [],
+      "related": ["elk_stack", "rest_api"],
+      "demand_weight": 0.75
+    },
+    {
+      "id": "neo4j",
+      "name": "Neo4j (Graph Database)",
+      "aliases": ["neo4j", "neo 4j", "graph database", "cypher"],
+      "category": "database",
+      "prerequisites": [],
+      "related": ["nosql", "python"],
+      "demand_weight": 0.62
+    },
+    {
+      "id": "dynamo_db",
+      "name": "Amazon DynamoDB",
+      "aliases": ["dynamodb", "dynamo db", "aws dynamodb"],
+      "category": "database",
+      "prerequisites": ["aws"],
+      "related": ["aws", "nosql", "aws_lambda"],
+      "demand_weight": 0.72
+    },
+    {
+      "id": "firebase_firestore",
+      "name": "Firebase Firestore / Realtime DB",
+      "aliases": ["firebase", "firestore", "firebase realtime database", "google firebase", "firebase firestore"],
+      "category": "database",
+      "prerequisites": [],
+      "related": ["react_native", "flutter", "nosql"],
+      "demand_weight": 0.71
+    },
+    {
+      "id": "couchbase",
+      "name": "Couchbase",
+      "aliases": ["couchbase", "couchdb", "couch base"],
+      "category": "database",
+      "prerequisites": [],
+      "related": ["nosql", "mongodb"],
+      "demand_weight": 0.52
+    },
+    {
+      "id": "supabase",
+      "name": "Supabase",
+      "aliases": ["supabase", "open source firebase"],
+      "category": "database",
+      "prerequisites": ["postgresql"],
+      "related": ["postgresql", "next_js", "firebase_firestore"],
+      "demand_weight": 0.64
+    },
+    {
+      "id": "clickhouse",
+      "name": "ClickHouse",
+      "aliases": ["clickhouse", "click house", "olap"],
+      "category": "database",
+      "prerequisites": ["sql"],
+      "related": ["sql", "data_warehousing", "big_data"],
+      "demand_weight": 0.60
+    },
+    {
+      "id": "database_indexing",
+      "name": "Database Indexing & Optimization",
+      "aliases": ["indexing", "query optimization", "db tuning", "query tuning", "b-tree", "database optimization"],
+      "category": "database",
+      "prerequisites": ["sql"],
+      "related": ["sql", "postgresql", "mysql", "database_design"],
+      "demand_weight": 0.77
+    },
+    {
+      "id": "database_migration",
+      "name": "Database Migration (Liquibase, Flyway, Alembic)",
+      "aliases": ["database migration", "liquibase", "flyway", "alembic", "db migrations"],
+      "category": "database",
+      "prerequisites": ["sql"],
+      "related": ["sql", "django", "spring_boot"],
+      "demand_weight": 0.68
+    },
+    {
+      "id": "database_design",
+      "name": "Database Design & Normalization",
+      "aliases": ["database design", "data modeling", "db schema", "normalization", "er modeling", "erd"],
+      "category": "database",
+      "prerequisites": ["sql"],
+      "related": ["sql", "postgresql", "mysql"],
+      "demand_weight": 0.79
+    },
+    {
+      "id": "nosql",
+      "name": "NoSQL Databases",
+      "aliases": ["nosql", "no sql", "non-relational database", "document db"],
+      "category": "database",
+      "prerequisites": [],
+      "related": ["mongodb", "cassandra", "redis", "dynamo_db"],
+      "demand_weight": 0.76
+    },
+    {
+      "id": "aws",
+      "name": "Amazon Web Services (AWS)",
+      "aliases": ["aws", "amazon web services", "amazon cloud", "aws cloud"],
+      "category": "cloud",
+      "prerequisites": [],
+      "related": ["aws_ec2", "aws_s3", "aws_lambda", "azure", "gcp", "cloud_security"],
+      "demand_weight": 0.86
+    },
+    {
+      "id": "aws_ec2",
+      "name": "AWS EC2",
+      "aliases": ["ec2", "aws ec2", "elastic compute cloud", "amazon ec2"],
+      "category": "cloud",
+      "prerequisites": ["aws"],
+      "related": ["aws", "linux_admin", "docker"],
+      "demand_weight": 0.80
+    },
+    {
+      "id": "aws_s3",
+      "name": "AWS S3",
+      "aliases": ["s3", "aws s3", "simple storage service", "amazon s3"],
+      "category": "cloud",
+      "prerequisites": ["aws"],
+      "related": ["aws", "aws_lambda"],
+      "demand_weight": 0.81
+    },
+    {
+      "id": "aws_lambda",
+      "name": "AWS Lambda (Serverless)",
+      "aliases": ["lambda", "aws lambda", "serverless compute", "amazon lambda"],
+      "category": "cloud",
+      "prerequisites": ["aws", "python"],
+      "related": ["aws", "serverless_architecture", "api_gateway"],
+      "demand_weight": 0.79
+    },
+    {
+      "id": "aws_rds",
+      "name": "AWS RDS",
+      "aliases": ["rds", "aws rds", "relational database service", "aurora", "aws aurora"],
+      "category": "cloud",
+      "prerequisites": ["aws", "sql"],
+      "related": ["aws", "postgresql", "mysql"],
+      "demand_weight": 0.78
+    },
+    {
+      "id": "aws_iam",
+      "name": "AWS IAM",
+      "aliases": ["iam", "aws iam", "identity and access management aws"],
+      "category": "cloud",
+      "prerequisites": ["aws"],
+      "related": ["aws", "cloud_security", "identity_access_management"],
+      "demand_weight": 0.77
+    },
+    {
+      "id": "aws_ecs",
+      "name": "AWS ECS",
+      "aliases": ["ecs", "aws ecs", "elastic container service", "fargate", "aws fargate"],
+      "category": "cloud",
+      "prerequisites": ["aws", "docker"],
+      "related": ["aws", "docker", "kubernetes"],
+      "demand_weight": 0.73
+    },
+    {
+      "id": "azure",
+      "name": "Microsoft Azure",
+      "aliases": ["azure", "ms azure", "microsoft azure", "azure cloud"],
+      "category": "cloud",
+      "prerequisites": [],
+      "related": ["aws", "gcp", "azure_vms", "azure_blob_storage", "azure_functions"],
+      "demand_weight": 0.82
+    },
+    {
+      "id": "azure_vms",
+      "name": "Azure Virtual Machines",
+      "aliases": ["azure vm", "azure vms", "azure virtual machines"],
+      "category": "cloud",
+      "prerequisites": ["azure"],
+      "related": ["azure", "linux_admin"],
+      "demand_weight": 0.74
+    },
+    {
+      "id": "azure_blob_storage",
+      "name": "Azure Blob Storage",
+      "aliases": ["azure blob", "blob storage", "azure storage"],
+      "category": "cloud",
+      "prerequisites": ["azure"],
+      "related": ["azure", "aws_s3"],
+      "demand_weight": 0.73
+    },
+    {
+      "id": "azure_app_service",
+      "name": "Azure App Services",
+      "aliases": ["azure app service", "azure app services", "app services"],
+      "category": "cloud",
+      "prerequisites": ["azure"],
+      "related": ["azure", "asp_net_core"],
+      "demand_weight": 0.71
+    },
+    {
+      "id": "azure_functions",
+      "name": "Azure Functions",
+      "aliases": ["azure functions", "azure function", "azure serverless"],
+      "category": "cloud",
+      "prerequisites": ["azure"],
+      "related": ["azure", "aws_lambda", "serverless_architecture"],
+      "demand_weight": 0.72
+    },
+    {
+      "id": "gcp",
+      "name": "Google Cloud Platform (GCP)",
+      "aliases": ["gcp", "google cloud", "google cloud platform"],
+      "category": "cloud",
+      "prerequisites": [],
+      "related": ["aws", "azure", "gcp_bigquery", "gcp_compute_engine"],
+      "demand_weight": 0.78
+    },
+    {
+      "id": "gcp_compute_engine",
+      "name": "GCP Compute Engine",
+      "aliases": ["gce", "compute engine", "gcp compute engine"],
+      "category": "cloud",
+      "prerequisites": ["gcp"],
+      "related": ["gcp", "aws_ec2"],
+      "demand_weight": 0.70
+    },
+    {
+      "id": "gcp_cloud_storage",
+      "name": "GCP Cloud Storage",
+      "aliases": ["gcs", "google cloud storage", "cloud storage"],
+      "category": "cloud",
+      "prerequisites": ["gcp"],
+      "related": ["gcp", "aws_s3"],
+      "demand_weight": 0.71
+    },
+    {
+      "id": "gcp_cloud_functions",
+      "name": "GCP Cloud Functions",
+      "aliases": ["cloud functions", "gcp functions", "google cloud functions"],
+      "category": "cloud",
+      "prerequisites": ["gcp"],
+      "related": ["gcp", "aws_lambda", "serverless_architecture"],
+      "demand_weight": 0.69
+    },
+    {
+      "id": "gcp_bigquery",
+      "name": "Google BigQuery",
+      "aliases": ["bigquery", "google bigquery", "big query", "gcp bigquery"],
+      "category": "cloud",
+      "prerequisites": ["gcp", "sql"],
+      "related": ["gcp", "snowflake", "data_warehousing", "sql"],
+      "demand_weight": 0.76
+    },
+    {
+      "id": "cloudflare",
+      "name": "Cloudflare",
+      "aliases": ["cloudflare", "cloudflare workers", "cloudflare cdn"],
+      "category": "cloud",
+      "prerequisites": [],
+      "related": ["network_security", "api_gateway"],
+      "demand_weight": 0.67
+    },
+    {
+      "id": "terraform",
+      "name": "Terraform (Infrastructure as Code)",
+      "aliases": ["terraform", "tf", "hashicorp terraform", "iac"],
+      "category": "cloud",
+      "prerequisites": ["cloud_architecture"],
+      "related": ["aws", "azure", "cloudformation"],
+      "demand_weight": 0.81
+    },
+    {
+      "id": "cloudformation",
+      "name": "AWS CloudFormation",
+      "aliases": ["cloudformation", "aws cloudformation", "cfn"],
+      "category": "cloud",
+      "prerequisites": ["aws"],
+      "related": ["aws", "terraform"],
+      "demand_weight": 0.68
+    },
+    {
+      "id": "serverless_architecture",
+      "name": "Serverless Architecture",
+      "aliases": ["serverless", "serverless architecture", "faas", "function as a service"],
+      "category": "cloud",
+      "prerequisites": ["cloud_architecture"],
+      "related": ["aws_lambda", "azure_functions", "gcp_cloud_functions"],
+      "demand_weight": 0.75
+    },
+    {
+      "id": "cloud_security",
+      "name": "Cloud Security",
+      "aliases": ["cloud security", "cloud sec", "aws security", "cloud compliance", "cspm"],
+      "category": "cloud",
+      "prerequisites": ["aws"],
+      "related": ["aws_iam", "network_security"],
+      "demand_weight": 0.78
+    },
+    {
+      "id": "cloud_architecture",
+      "name": "Cloud Architecture & Design Patterns",
+      "aliases": ["cloud architecture", "cloud system design", "well architected framework", "cloud solutions"],
+      "category": "cloud",
+      "prerequisites": ["aws"],
+      "related": ["aws", "azure", "terraform", "microservices"],
+      "demand_weight": 0.83
+    },
+    {
+      "id": "git",
+      "name": "Git",
+      "aliases": ["git", "git vcs", "version control git", "git source control"],
+      "category": "devops",
+      "prerequisites": [],
+      "related": ["github", "gitlab", "bitbucket", "ci_cd_pipelines"],
+      "demand_weight": 0.90
+    },
+    {
+      "id": "github",
+      "name": "GitHub",
+      "aliases": ["github", "git hub", "github.com"],
+      "category": "devops",
+      "prerequisites": ["git"],
+      "related": ["git", "github_actions", "gitlab"],
+      "demand_weight": 0.88
+    },
+    {
+      "id": "gitlab",
+      "name": "GitLab",
+      "aliases": ["gitlab", "git lab", "gitlab.com"],
+      "category": "devops",
+      "prerequisites": ["git"],
+      "related": ["git", "gitlab_ci_cd", "github"],
+      "demand_weight": 0.78
+    },
+    {
+      "id": "bitbucket",
+      "name": "Bitbucket",
+      "aliases": ["bitbucket", "bit bucket", "atlassian bitbucket"],
+      "category": "devops",
+      "prerequisites": ["git"],
+      "related": ["git", "github"],
+      "demand_weight": 0.65
+    },
+    {
+      "id": "docker",
+      "name": "Docker",
+      "aliases": ["docker", "docker containers", "dockerfile", "docker compose", "containerization"],
+      "category": "devops",
+      "prerequisites": ["linux_admin"],
+      "related": ["kubernetes", "microservices", "ci_cd_pipelines", "helm"],
+      "demand_weight": 0.84
+    },
+    {
+      "id": "kubernetes",
+      "name": "Kubernetes (K8s)",
+      "aliases": ["kubernetes", "k8s", "kube", "kubectl", "k8", "container orchestration"],
+      "category": "devops",
+      "prerequisites": ["docker", "linux_admin"],
+      "related": ["docker", "helm", "argocd", "microservices", "prometheus"],
+      "demand_weight": 0.82
+    },
+    {
+      "id": "helm",
+      "name": "Helm",
+      "aliases": ["helm", "helm charts", "kubernetes helm"],
+      "category": "devops",
+      "prerequisites": ["kubernetes"],
+      "related": ["kubernetes", "docker"],
+      "demand_weight": 0.72
+    },
+    {
+      "id": "jenkins",
+      "name": "Jenkins",
+      "aliases": ["jenkins", "jenkins ci", "jenkins pipeline", "jenkinsfile"],
+      "category": "devops",
+      "prerequisites": ["git", "shell_scripting"],
+      "related": ["ci_cd_pipelines", "docker", "github_actions"],
+      "demand_weight": 0.80
+    },
+    {
+      "id": "github_actions",
+      "name": "GitHub Actions",
+      "aliases": ["github actions", "gh actions", "github ci", "github workflows"],
+      "category": "devops",
+      "prerequisites": ["git", "github"],
+      "related": ["github", "ci_cd_pipelines", "jenkins", "docker"],
+      "demand_weight": 0.82
+    },
+    {
+      "id": "gitlab_ci_cd",
+      "name": "GitLab CI/CD",
+      "aliases": ["gitlab ci", "gitlab ci/cd", "gitlab-ci", "gitlab pipelines"],
+      "category": "devops",
+      "prerequisites": ["git", "gitlab"],
+      "related": ["gitlab", "ci_cd_pipelines", "docker"],
+      "demand_weight": 0.75
+    },
+    {
+      "id": "argocd",
+      "name": "Argo CD",
+      "aliases": ["argocd", "argo cd", "argo-cd", "gitops"],
+      "category": "devops",
+      "prerequisites": ["kubernetes", "git"],
+      "related": ["kubernetes", "git", "helm"],
+      "demand_weight": 0.73
+    },
+    {
+      "id": "ansible",
+      "name": "Ansible",
+      "aliases": ["ansible", "ansible playbook", "ansible playbooks", "red hat ansible"],
+      "category": "devops",
+      "prerequisites": ["linux_admin", "shell_scripting"],
+      "related": ["terraform", "linux_admin"],
+      "demand_weight": 0.75
+    },
+    {
+      "id": "puppet",
+      "name": "Puppet",
+      "aliases": ["puppet", "puppet configuration"],
+      "category": "devops",
+      "prerequisites": ["linux_admin"],
+      "related": ["chef", "ansible"],
+      "demand_weight": 0.48
+    },
+    {
+      "id": "chef",
+      "name": "Chef",
+      "aliases": ["chef", "chef infra"],
+      "category": "devops",
+      "prerequisites": ["linux_admin", "ruby"],
+      "related": ["puppet", "ansible"],
+      "demand_weight": 0.46
+    },
+    {
+      "id": "prometheus",
+      "name": "Prometheus",
+      "aliases": ["prometheus", "promql"],
+      "category": "devops",
+      "prerequisites": ["linux_admin"],
+      "related": ["grafana", "kubernetes", "datadog"],
+      "demand_weight": 0.76
+    },
+    {
+      "id": "grafana",
+      "name": "Grafana",
+      "aliases": ["grafana", "grafana dashboards", "grafana monitoring"],
+      "category": "devops",
+      "prerequisites": [],
+      "related": ["prometheus", "datadog", "elk_stack"],
+      "demand_weight": 0.78
+    },
+    {
+      "id": "datadog",
+      "name": "Datadog",
+      "aliases": ["datadog", "data dog", "datadog apm"],
+      "category": "devops",
+      "prerequisites": [],
+      "related": ["prometheus", "grafana"],
+      "demand_weight": 0.73
+    },
+    {
+      "id": "elk_stack",
+      "name": "ELK Stack (Elasticsearch, Logstash, Kibana)",
+      "aliases": ["elk", "elk stack", "elastic stack", "kibana", "logstash"],
+      "category": "devops",
+      "prerequisites": ["linux_admin"],
+      "related": ["elasticsearch", "grafana", "splunk"],
+      "demand_weight": 0.76
+    },
+    {
+      "id": "splunk",
+      "name": "Splunk",
+      "aliases": ["splunk", "splunk enterprise", "splunk siem"],
+      "category": "devops",
+      "prerequisites": [],
+      "related": ["elk_stack", "siem"],
+      "demand_weight": 0.70
+    },
+    {
+      "id": "linux_admin",
+      "name": "Linux Administration",
+      "aliases": ["linux", "linux administration", "unix", "ubuntu", "centos", "redhat", "rhel", "debian"],
+      "category": "devops",
+      "prerequisites": [],
+      "related": ["shell_scripting", "docker", "network_security"],
+      "demand_weight": 0.84
+    },
+    {
+      "id": "nginx",
+      "name": "NGINX",
+      "aliases": ["nginx", "engine x", "nginx reverse proxy", "nginx server"],
+      "category": "devops",
+      "prerequisites": ["linux_admin"],
+      "related": ["apache_httpd", "api_gateway", "docker", "linux_admin"],
+      "demand_weight": 0.78
+    },
+    {
+      "id": "apache_httpd",
+      "name": "Apache HTTP Server",
+      "aliases": ["apache", "apache2", "apache http server", "httpd"],
+      "category": "devops",
+      "prerequisites": ["linux_admin"],
+      "related": ["nginx", "linux_admin"],
+      "demand_weight": 0.65
+    },
+    {
+      "id": "ci_cd_pipelines",
+      "name": "CI/CD Pipelines",
+      "aliases": ["ci/cd", "ci cd", "continuous integration", "continuous deployment", "continuous delivery", "build pipelines"],
+      "category": "devops",
+      "prerequisites": ["git"],
+      "related": ["jenkins", "github_actions", "gitlab_ci_cd", "docker"],
+      "demand_weight": 0.85
+    },
+    {
+      "id": "machine_learning",
+      "name": "Machine Learning",
+      "aliases": ["ml", "machine learning", "machine learning algorithms", "statistical learning"],
+      "category": "ai_ml",
+      "prerequisites": ["python", "statistics"],
+      "related": ["deep_learning", "scikit_learn", "data_analysis"],
+      "demand_weight": 0.86
+    },
+    {
+      "id": "deep_learning",
+      "name": "Deep Learning",
+      "aliases": ["dl", "deep learning", "neural networks", "ann", "deep neural networks"],
+      "category": "ai_ml",
+      "prerequisites": ["machine_learning", "python"],
+      "related": ["machine_learning", "tensorflow", "pytorch", "computer_vision", "nlp"],
+      "demand_weight": 0.82
+    },
+    {
+      "id": "nlp",
+      "name": "Natural Language Processing (NLP)",
+      "aliases": ["nlp", "natural language processing", "text mining", "computational linguistics"],
+      "category": "ai_ml",
+      "prerequisites": ["machine_learning", "python"],
+      "related": ["large_language_models", "huggingface_transformers", "spacy", "nltk", "generative_ai"],
+      "demand_weight": 0.84
+    },
+    {
+      "id": "computer_vision",
+      "name": "Computer Vision (CV)",
+      "aliases": ["cv", "computer vision", "image processing", "object detection", "image classification"],
+      "category": "ai_ml",
+      "prerequisites": ["deep_learning", "python"],
+      "related": ["opencv", "pytorch", "tensorflow"],
+      "demand_weight": 0.78
+    },
+    {
+      "id": "tensorflow",
+      "name": "TensorFlow",
+      "aliases": ["tensorflow", "tf", "tensor flow", "tensorflow 2"],
+      "category": "ai_ml",
+      "prerequisites": ["python", "machine_learning"],
+      "related": ["keras", "pytorch", "deep_learning"],
+      "demand_weight": 0.79
+    },
+    {
+      "id": "pytorch",
+      "name": "PyTorch",
+      "aliases": ["pytorch", "torch", "py torch"],
+      "category": "ai_ml",
+      "prerequisites": ["python", "machine_learning"],
+      "related": ["tensorflow", "deep_learning", "huggingface_transformers"],
+      "demand_weight": 0.81
+    },
+    {
+      "id": "keras",
+      "name": "Keras",
+      "aliases": ["keras", "tf.keras"],
+      "category": "ai_ml",
+      "prerequisites": ["python", "tensorflow"],
+      "related": ["tensorflow", "deep_learning"],
+      "demand_weight": 0.73
+    },
+    {
+      "id": "scikit_learn",
+      "name": "Scikit-Learn",
+      "aliases": ["scikit-learn", "sklearn", "scikit learn", "sci-kit learn"],
+      "category": "ai_ml",
+      "prerequisites": ["python", "machine_learning"],
+      "related": ["python", "pandas", "numpy", "machine_learning"],
+      "demand_weight": 0.82
+    },
+    {
+      "id": "large_language_models",
+      "name": "Large Language Models (LLMs)",
+      "aliases": ["llm", "llms", "large language models", "gpt", "gpt-4", "llama", "claude"],
+      "category": "ai_ml",
+      "prerequisites": ["nlp", "deep_learning"],
+      "related": ["generative_ai", "prompt_engineering", "langchain", "rag_systems", "fine_tuning_llms"],
+      "demand_weight": 0.85
+    },
+    {
+      "id": "generative_ai",
+      "name": "Generative AI (GenAI)",
+      "aliases": ["genai", "gen ai", "generative ai", "generative artificial intelligence"],
+      "category": "ai_ml",
+      "prerequisites": ["machine_learning"],
+      "related": ["large_language_models", "langchain", "prompt_engineering", "rag_systems"],
+      "demand_weight": 0.88
+    },
+    {
+      "id": "huggingface_transformers",
+      "name": "Hugging Face Transformers",
+      "aliases": ["huggingface", "hugging face", "transformers library", "hf transformers"],
+      "category": "ai_ml",
+      "prerequisites": ["pytorch", "nlp"],
+      "related": ["large_language_models", "nlp", "pytorch", "fine_tuning_llms"],
+      "demand_weight": 0.80
+    },
+    {
+      "id": "langchain",
+      "name": "LangChain",
+      "aliases": ["langchain", "lang chain", "langchain.js"],
+      "category": "ai_ml",
+      "prerequisites": ["python", "large_language_models"],
+      "related": ["llamaindex", "rag_systems", "vector_databases", "large_language_models"],
+      "demand_weight": 0.75
+    },
+    {
+      "id": "llamaindex",
+      "name": "LlamaIndex",
+      "aliases": ["llamaindex", "llama index", "gpt index"],
+      "category": "ai_ml",
+      "prerequisites": ["python", "large_language_models"],
+      "related": ["langchain", "rag_systems", "vector_databases"],
+      "demand_weight": 0.71
+    },
+    {
+      "id": "prompt_engineering",
+      "name": "Prompt Engineering",
+      "aliases": ["prompt engineering", "in-context learning", "few shot prompting", "chain of thought"],
+      "category": "ai_ml",
+      "prerequisites": [],
+      "related": ["generative_ai", "large_language_models", "langchain"],
+      "demand_weight": 0.77
+    },
+    {
+      "id": "opencv",
+      "name": "OpenCV",
+      "aliases": ["opencv", "open cv", "cv2", "computer vision library"],
+      "category": "ai_ml",
+      "prerequisites": ["python"],
+      "related": ["computer_vision", "deep_learning", "numpy"],
+      "demand_weight": 0.75
+    },
+    {
+      "id": "vector_databases",
+      "name": "Vector Databases (Pinecone, Chroma, Milvus, Qdrant)",
+      "aliases": ["vector database", "vector db", "pinecone", "chromadb", "chroma", "milvus", "qdrant", "weaviate", "embeddings"],
+      "category": "ai_ml",
+      "prerequisites": [],
+      "related": ["rag_systems", "langchain", "large_language_models"],
+      "demand_weight": 0.78
+    },
+    {
+      "id": "rag_systems",
+      "name": "Retrieval-Augmented Generation (RAG)",
+      "aliases": ["rag", "retrieval augmented generation", "retrieval-augmented generation", "semantic search"],
+      "category": "ai_ml",
+      "prerequisites": ["large_language_models", "vector_databases"],
+      "related": ["langchain", "llamaindex", "vector_databases", "large_language_models"],
+      "demand_weight": 0.81
+    },
+    {
+      "id": "mlops",
+      "name": "MLOps",
+      "aliases": ["mlops", "ml ops", "machine learning operations", "model deployment"],
+      "category": "ai_ml",
+      "prerequisites": ["machine_learning", "docker"],
+      "related": ["mlflow", "kubeflow", "docker", "ci_cd_pipelines"],
+      "demand_weight": 0.79
+    },
+    {
+      "id": "mlflow",
+      "name": "MLflow",
+      "aliases": ["mlflow", "ml flow"],
+      "category": "ai_ml",
+      "prerequisites": ["python", "machine_learning"],
+      "related": ["mlops", "kubeflow", "scikit_learn"],
+      "demand_weight": 0.73
+    },
+    {
+      "id": "kubeflow",
+      "name": "Kubeflow",
+      "aliases": ["kubeflow", "kube flow"],
+      "category": "ai_ml",
+      "prerequisites": ["kubernetes", "mlops"],
+      "related": ["mlops", "kubernetes", "mlflow"],
+      "demand_weight": 0.70
+    },
+    {
+      "id": "fine_tuning_llms",
+      "name": "LLM Fine-Tuning (LoRA, QLoRA)",
+      "aliases": ["fine-tuning", "finetuning", "lora", "qlora", "peft", "model fine-tuning"],
+      "category": "ai_ml",
+      "prerequisites": ["large_language_models", "pytorch"],
+      "related": ["huggingface_transformers", "large_language_models", "pytorch"],
+      "demand_weight": 0.76
+    },
+    {
+      "id": "speech_recognition",
+      "name": "Speech Recognition / ASR",
+      "aliases": ["speech recognition", "asr", "automatic speech recognition", "whisper", "tts", "text to speech"],
+      "category": "ai_ml",
+      "prerequisites": ["deep_learning"],
+      "related": ["deep_learning", "nlp", "python"],
+      "demand_weight": 0.68
+    },
+    {
+      "id": "reinforcement_learning",
+      "name": "Reinforcement Learning",
+      "aliases": ["reinforcement learning", "rl", "deep rl", "q-learning", "rlhf"],
+      "category": "ai_ml",
+      "prerequisites": ["machine_learning"],
+      "related": ["deep_learning", "large_language_models"],
+      "demand_weight": 0.69
+    },
+    {
+      "id": "spacy",
+      "name": "spaCy",
+      "aliases": ["spacy", "spa cy"],
+      "category": "ai_ml",
+      "prerequisites": ["python", "nlp"],
+      "related": ["nlp", "nltk", "huggingface_transformers"],
+      "demand_weight": 0.74
+    },
+    {
+      "id": "nltk",
+      "name": "NLTK",
+      "aliases": ["nltk", "natural language toolkit"],
+      "category": "ai_ml",
+      "prerequisites": ["python", "nlp"],
+      "related": ["nlp", "spacy"],
+      "demand_weight": 0.67
+    },
+    {
+      "id": "data_analysis",
+      "name": "Data Analysis",
+      "aliases": ["data analysis", "data analytics", "analytics", "exploratory data analysis"],
+      "category": "data_science",
+      "prerequisites": ["sql"],
+      "related": ["statistics", "data_visualization", "pandas", "excel"],
+      "demand_weight": 0.86
+    },
+    {
+      "id": "data_visualization",
+      "name": "Data Visualization",
+      "aliases": ["data visualization", "data viz", "dataviz", "dashboarding", "visual analytics"],
+      "category": "data_science",
+      "prerequisites": [],
+      "related": ["tableau", "power_bi", "matplotlib", "seaborn"],
+      "demand_weight": 0.83
+    },
+    {
+      "id": "pandas",
+      "name": "Pandas",
+      "aliases": ["pandas", "pd", "python pandas"],
+      "category": "data_science",
+      "prerequisites": ["python"],
+      "related": ["python", "numpy", "data_analysis", "matplotlib"],
+      "demand_weight": 0.88
+    },
+    {
+      "id": "numpy",
+      "name": "NumPy",
+      "aliases": ["numpy", "np", "numerical python"],
+      "category": "data_science",
+      "prerequisites": ["python"],
+      "related": ["python", "pandas", "scipy", "machine_learning"],
+      "demand_weight": 0.85
+    },
+    {
+      "id": "scipy",
+      "name": "SciPy",
+      "aliases": ["scipy", "scientific python"],
+      "category": "data_science",
+      "prerequisites": ["numpy", "python"],
+      "related": ["numpy", "statistics"],
+      "demand_weight": 0.70
+    },
+    {
+      "id": "matplotlib",
+      "name": "Matplotlib",
+      "aliases": ["matplotlib", "plt", "python matplotlib"],
+      "category": "data_science",
+      "prerequisites": ["python"],
+      "related": ["seaborn", "pandas", "data_visualization"],
+      "demand_weight": 0.76
+    },
+    {
+      "id": "seaborn",
+      "name": "Seaborn",
+      "aliases": ["seaborn", "sns", "python seaborn"],
+      "category": "data_science",
+      "prerequisites": ["matplotlib", "python"],
+      "related": ["matplotlib", "pandas", "data_visualization"],
+      "demand_weight": 0.74
+    },
+    {
+      "id": "tableau",
+      "name": "Tableau",
+      "aliases": ["tableau", "tableau desktop", "tableau server"],
+      "category": "data_science",
+      "prerequisites": ["data_visualization"],
+      "related": ["power_bi", "data_visualization", "sql", "business_intelligence"],
+      "demand_weight": 0.81
+    },
+    {
+      "id": "power_bi",
+      "name": "Power BI",
+      "aliases": ["power bi", "powerbi", "power-bi", "dax", "power query"],
+      "category": "data_science",
+      "prerequisites": ["data_visualization"],
+      "related": ["tableau", "excel", "sql", "business_intelligence"],
+      "demand_weight": 0.84
+    },
+    {
+      "id": "excel",
+      "name": "Microsoft Excel (Advanced)",
+      "aliases": ["excel", "ms excel", "microsoft excel", "vlookup", "pivot tables", "excel modeling"],
+      "category": "data_science",
+      "prerequisites": [],
+      "related": ["power_bi", "data_analysis", "statistics"],
+      "demand_weight": 0.80
+    },
+    {
+      "id": "statistics",
+      "name": "Statistics & Probability",
+      "aliases": ["statistics", "stats", "probability", "inferential statistics", "descriptive statistics", "hypothesis testing"],
+      "category": "data_science",
+      "prerequisites": [],
+      "related": ["data_analysis", "machine_learning", "r"],
+      "demand_weight": 0.83
+    },
+    {
+      "id": "exploratory_data_analysis",
+      "name": "Exploratory Data Analysis (EDA)",
+      "aliases": ["eda", "exploratory data analysis", "data exploration"],
+      "category": "data_science",
+      "prerequisites": ["pandas", "statistics"],
+      "related": ["data_analysis", "data_visualization", "feature_engineering"],
+      "demand_weight": 0.80
+    },
+    {
+      "id": "apache_spark",
+      "name": "Apache Spark",
+      "aliases": ["spark", "apache spark", "spark streaming", "spark sql"],
+      "category": "data_science",
+      "prerequisites": ["sql"],
+      "related": ["pyspark", "hadoop", "scala", "data_warehousing"],
+      "demand_weight": 0.81
+    },
+    {
+      "id": "pyspark",
+      "name": "PySpark",
+      "aliases": ["pyspark", "py spark", "python spark"],
+      "category": "data_science",
+      "prerequisites": ["python", "apache_spark"],
+      "related": ["apache_spark", "python", "pandas", "hadoop"],
+      "demand_weight": 0.79
+    },
+    {
+      "id": "hadoop",
+      "name": "Apache Hadoop",
+      "aliases": ["hadoop", "apache hadoop", "hdfs", "mapreduce", "hive"],
+      "category": "data_science",
+      "prerequisites": [],
+      "related": ["apache_spark", "data_warehousing", "big_data"],
+      "demand_weight": 0.67
+    },
+    {
+      "id": "data_warehousing",
+      "name": "Data Warehousing",
+      "aliases": ["data warehousing", "data warehouse", "dwh", "star schema", "dimensional modeling", "snowflake schema"],
+      "category": "data_science",
+      "prerequisites": ["sql"],
+      "related": ["snowflake", "gcp_bigquery", "etl_pipelines"],
+      "demand_weight": 0.80
+    },
+    {
+      "id": "etl_pipelines",
+      "name": "ETL Pipeline Development",
+      "aliases": ["etl", "elt", "etl pipeline", "etl pipelines", "data pipeline", "data pipelines", "data ingestion"],
+      "category": "data_science",
+      "prerequisites": ["sql", "python"],
+      "related": ["apache_airflow", "data_warehousing", "snowflake", "dbt"],
+      "demand_weight": 0.83
+    },
+    {
+      "id": "snowflake",
+      "name": "Snowflake",
+      "aliases": ["snowflake", "snowflake db", "snowflake data cloud"],
+      "category": "data_science",
+      "prerequisites": ["sql"],
+      "related": ["data_warehousing", "gcp_bigquery", "dbt", "sql"],
+      "demand_weight": 0.82
+    },
+    {
+      "id": "dbt",
+      "name": "dbt (data build tool)",
+      "aliases": ["dbt", "data build tool", "dbt core", "dbt cloud"],
+      "category": "data_science",
+      "prerequisites": ["sql"],
+      "related": ["snowflake", "gcp_bigquery", "etl_pipelines", "sql"],
+      "demand_weight": 0.76
+    },
+    {
+      "id": "apache_airflow",
+      "name": "Apache Airflow",
+      "aliases": ["airflow", "apache airflow", "airflow dags", "workflow orchestration"],
+      "category": "data_science",
+      "prerequisites": ["python"],
+      "related": ["etl_pipelines", "data_warehousing", "python"],
+      "demand_weight": 0.79
+    },
+    {
+      "id": "feature_engineering",
+      "name": "Feature Engineering",
+      "aliases": ["feature engineering", "feature selection", "feature extraction", "data preprocessing"],
+      "category": "data_science",
+      "prerequisites": ["pandas", "statistics"],
+      "related": ["machine_learning", "exploratory_data_analysis", "scikit_learn"],
+      "demand_weight": 0.80
+    },
+    {
+      "id": "business_intelligence",
+      "name": "Business Intelligence (BI)",
+      "aliases": ["business intelligence", "bi", "bi reporting", "kpis", "executive dashboarding"],
+      "category": "data_science",
+      "prerequisites": ["data_analysis"],
+      "related": ["power_bi", "tableau", "sql", "data_visualization"],
+      "demand_weight": 0.79
+    },
+    {
+      "id": "big_data",
+      "name": "Big Data Technologies",
+      "aliases": ["big data", "big data analytics", "distributed data processing"],
+      "category": "data_science",
+      "prerequisites": [],
+      "related": ["hadoop", "apache_spark", "apache_kafka"],
+      "demand_weight": 0.76
+    },
+    {
+      "id": "android_development",
+      "name": "Android Development",
+      "aliases": ["android", "android dev", "android development", "android app", "android native"],
+      "category": "mobile",
+      "prerequisites": ["kotlin"],
+      "related": ["jetpack_compose", "android_sdk", "android_studio", "mobile_app_security"],
+      "demand_weight": 0.82
+    },
+    {
+      "id": "ios_development",
+      "name": "iOS Development",
+      "aliases": ["ios", "ios dev", "ios development", "ios app", "iphone app development"],
+      "category": "mobile",
+      "prerequisites": ["swift"],
+      "related": ["swiftui", "uikit", "xcode", "mobile_app_security"],
+      "demand_weight": 0.79
+    },
+    {
+      "id": "flutter",
+      "name": "Flutter",
+      "aliases": ["flutter", "flutter framework", "flutter sdk", "flutter mobile"],
+      "category": "mobile",
+      "prerequisites": ["dart"],
+      "related": ["dart", "react_native", "mobile_app_security"],
+      "demand_weight": 0.75
+    },
+    {
+      "id": "react_native",
+      "name": "React Native",
+      "aliases": ["react native", "react-native", "rn", "react native app"],
+      "category": "mobile",
+      "prerequisites": ["react", "javascript"],
+      "related": ["react", "expo", "flutter", "mobile_app_security"],
+      "demand_weight": 0.78
+    },
+    {
+      "id": "jetpack_compose",
+      "name": "Jetpack Compose",
+      "aliases": ["jetpack compose", "compose", "android compose"],
+      "category": "mobile",
+      "prerequisites": ["kotlin", "android_development"],
+      "related": ["kotlin", "android_development", "android_sdk"],
+      "demand_weight": 0.76
+    },
+    {
+      "id": "android_sdk",
+      "name": "Android SDK",
+      "aliases": ["android sdk", "android ndk", "android core"],
+      "category": "mobile",
+      "prerequisites": ["android_development"],
+      "related": ["android_development", "jetpack_compose", "android_studio"],
+      "demand_weight": 0.78
+    },
+    {
+      "id": "swiftui",
+      "name": "SwiftUI",
+      "aliases": ["swiftui", "swift ui"],
+      "category": "mobile",
+      "prerequisites": ["swift", "ios_development"],
+      "related": ["swift", "uikit", "ios_development", "xcode"],
+      "demand_weight": 0.75
+    },
+    {
+      "id": "uikit",
+      "name": "UIKit",
+      "aliases": ["uikit", "ui kit", "apple uikit"],
+      "category": "mobile",
+      "prerequisites": ["swift", "ios_development"],
+      "related": ["swift", "swiftui", "ios_development", "xcode"],
+      "demand_weight": 0.71
+    },
+    {
+      "id": "xcode",
+      "name": "Xcode",
+      "aliases": ["xcode", "apple xcode", "xcode ide"],
+      "category": "mobile",
+      "prerequisites": [],
+      "related": ["ios_development", "swift", "swiftui"],
+      "demand_weight": 0.73
+    },
+    {
+      "id": "android_studio",
+      "name": "Android Studio",
+      "aliases": ["android studio", "android ide"],
+      "category": "mobile",
+      "prerequisites": [],
+      "related": ["android_development", "kotlin", "android_sdk"],
+      "demand_weight": 0.77
+    },
+    {
+      "id": "expo",
+      "name": "Expo",
+      "aliases": ["expo", "expo cli", "expo sdk"],
+      "category": "mobile",
+      "prerequisites": ["react_native"],
+      "related": ["react_native", "react"],
+      "demand_weight": 0.68
+    },
+    {
+      "id": "ionic",
+      "name": "Ionic",
+      "aliases": ["ionic", "ionic framework", "capacitor", "cordova"],
+      "category": "mobile",
+      "prerequisites": ["javascript", "angular"],
+      "related": ["angular", "react_native"],
+      "demand_weight": 0.55
+    },
+    {
+      "id": "kotlin_multiplatform",
+      "name": "Kotlin Multiplatform (KMP)",
+      "aliases": ["kmp", "kotlin multiplatform", "kmm", "kotlin multiplatform mobile"],
+      "category": "mobile",
+      "prerequisites": ["kotlin"],
+      "related": ["kotlin", "android_development", "ios_development"],
+      "demand_weight": 0.65
+    },
+    {
+      "id": "mobile_app_security",
+      "name": "Mobile Application Security",
+      "aliases": ["mobile security", "android security", "ios security", "masvs", "mobile app security"],
+      "category": "mobile",
+      "prerequisites": [],
+      "related": ["android_development", "ios_development", "application_security"],
+      "demand_weight": 0.70
+    },
+    {
+      "id": "app_store_deployment",
+      "name": "App Store / Play Store Deployment",
+      "aliases": ["google play console", "app store connect", "play store publishing", "testflight", "app deployment"],
+      "category": "mobile",
+      "prerequisites": [],
+      "related": ["android_development", "ios_development", "ci_cd_pipelines"],
+      "demand_weight": 0.72
+    },
+    {
+      "id": "mobile_ui_design",
+      "name": "Mobile UI/UX Design",
+      "aliases": ["mobile ui", "mobile ux", "material design guidelines", "human interface guidelines", "hig"],
+      "category": "mobile",
+      "prerequisites": [],
+      "related": ["ui_design", "figma", "android_development", "ios_development"],
+      "demand_weight": 0.72
+    },
+    {
+      "id": "network_security",
+      "name": "Network Security",
+      "aliases": ["network security", "netsec", "firewall", "vpn", "routing security", "tcp/ip security"],
+      "category": "cybersecurity",
+      "prerequisites": [],
+      "related": ["firewalls", "wireshark", "ethical_hacking", "penetration_testing"],
+      "demand_weight": 0.80
+    },
+    {
+      "id": "application_security",
+      "name": "Application Security (AppSec)",
+      "aliases": ["appsec", "application security", "secure coding", "code review security", "sast", "dast"],
+      "category": "cybersecurity",
+      "prerequisites": [],
+      "related": ["owasp_top_10", "penetration_testing", "vulnerability_assessment"],
+      "demand_weight": 0.82
+    },
+    {
+      "id": "ethical_hacking",
+      "name": "Ethical Hacking",
+      "aliases": ["ethical hacking", "white hat hacking", "ceh", "certified ethical hacker"],
+      "category": "cybersecurity",
+      "prerequisites": ["network_security"],
+      "related": ["penetration_testing", "metasploit", "burp_suite", "wireshark"],
+      "demand_weight": 0.81
+    },
+    {
+      "id": "penetration_testing",
+      "name": "Penetration Testing (PenTesting)",
+      "aliases": ["pen testing", "penetration testing", "pentest", "pentesting", "red teaming"],
+      "category": "cybersecurity",
+      "prerequisites": ["ethical_hacking", "network_security"],
+      "related": ["burp_suite", "metasploit", "application_security", "vulnerability_assessment"],
+      "demand_weight": 0.82
+    },
+    {
+      "id": "owasp_top_10",
+      "name": "OWASP Top 10",
+      "aliases": ["owasp", "owasp top 10", "owasp top ten", "web security vulnerabilities"],
+      "category": "cybersecurity",
+      "prerequisites": [],
+      "related": ["application_security", "penetration_testing"],
+      "demand_weight": 0.84
+    },
+    {
+      "id": "cryptography",
+      "name": "Cryptography & Encryption",
+      "aliases": ["cryptography", "encryption", "tls/ssl", "pki", "symmetric encryption", "asymmetric encryption", "hashing"],
+      "category": "cybersecurity",
+      "prerequisites": [],
+      "related": ["network_security", "blockchain_fundamentals"],
+      "demand_weight": 0.76
+    },
+    {
+      "id": "siem",
+      "name": "SIEM (Security Information & Event Management)",
+      "aliases": ["siem", "security information and event management", "soc", "qradar", "sentinel"],
+      "category": "cybersecurity",
+      "prerequisites": [],
+      "related": ["splunk", "incident_response"],
+      "demand_weight": 0.78
+    },
+    {
+      "id": "vulnerability_assessment",
+      "name": "Vulnerability Assessment (VAPT)",
+      "aliases": ["vapt", "vulnerability assessment", "nessus", "qualys", "vulnerability management"],
+      "category": "cybersecurity",
+      "prerequisites": ["network_security"],
+      "related": ["penetration_testing", "application_security"],
+      "demand_weight": 0.79
+    },
+    {
+      "id": "wireshark",
+      "name": "Wireshark",
+      "aliases": ["wireshark", "packet analysis", "network packet sniffer", "pcap"],
+      "category": "cybersecurity",
+      "prerequisites": ["network_security"],
+      "related": ["network_security", "penetration_testing"],
+      "demand_weight": 0.74
+    },
+    {
+      "id": "burp_suite",
+      "name": "Burp Suite",
+      "aliases": ["burp", "burp suite", "burpsuite", "burp suite professional"],
+      "category": "cybersecurity",
+      "prerequisites": ["application_security"],
+      "related": ["application_security", "penetration_testing", "owasp_top_10"],
+      "demand_weight": 0.79
+    },
+    {
+      "id": "metasploit",
+      "name": "Metasploit Framework",
+      "aliases": ["metasploit", "metasploit framework", "msf"],
+      "category": "cybersecurity",
+      "prerequisites": ["ethical_hacking"],
+      "related": ["ethical_hacking", "penetration_testing"],
+      "demand_weight": 0.72
+    },
+    {
+      "id": "identity_access_management",
+      "name": "Identity & Access Management (IAM)",
+      "aliases": ["iam", "identity access management", "saml", "okta", "single sign-on", "sso"],
+      "category": "cybersecurity",
+      "prerequisites": [],
+      "related": ["oauth2", "cloud_security"],
+      "demand_weight": 0.79
+    },
+    {
+      "id": "firewalls",
+      "name": "Firewalls & IDS/IPS",
+      "aliases": ["firewall", "firewalls", "ids", "ips", "intrusion detection", "palo alto", "fortinet"],
+      "category": "cybersecurity",
+      "prerequisites": ["network_security"],
+      "related": ["network_security"],
+      "demand_weight": 0.75
+    },
+    {
+      "id": "incident_response",
+      "name": "Incident Response & Forensics",
+      "aliases": ["incident response", "incident handling", "digital forensics", "dfir", "csirt"],
+      "category": "cybersecurity",
+      "prerequisites": ["siem"],
+      "related": ["siem", "malware_analysis"],
+      "demand_weight": 0.77
+    },
+    {
+      "id": "malware_analysis",
+      "name": "Malware Analysis",
+      "aliases": ["malware analysis", "reverse engineering malware", "threat analysis"],
+      "category": "cybersecurity",
+      "prerequisites": ["incident_response"],
+      "related": ["incident_response", "ethical_hacking"],
+      "demand_weight": 0.70
+    },
+    {
+      "id": "zero_trust_architecture",
+      "name": "Zero Trust Architecture",
+      "aliases": ["zero trust", "zta", "zero trust architecture", "zero-trust"],
+      "category": "cybersecurity",
+      "prerequisites": ["network_security"],
+      "related": ["cloud_security", "identity_access_management"],
+      "demand_weight": 0.76
+    },
+    {
+      "id": "compliance_standards",
+      "name": "Security Compliance (SOC2, ISO 27001, GDPR)",
+      "aliases": ["iso 27001", "soc2", "soc 2", "gdpr", "hipaa", "security compliance", "pci-dss"],
+      "category": "cybersecurity",
+      "prerequisites": [],
+      "related": ["cloud_security"],
+      "demand_weight": 0.73
+    },
+    {
+      "id": "devsecops",
+      "name": "DevSecOps",
+      "aliases": ["devsecops", "dev sec ops", "security in devops", "shift left security"],
+      "category": "cybersecurity",
+      "prerequisites": ["ci_cd_pipelines", "application_security"],
+      "related": ["ci_cd_pipelines", "application_security", "docker"],
+      "demand_weight": 0.81
+    },
+    {
+      "id": "problem_solving",
+      "name": "Problem Solving",
+      "aliases": ["problem solving", "analytical thinking", "troubleshooting", "problem-solving", "debugging mindset"],
+      "category": "soft_skills",
+      "prerequisites": [],
+      "related": ["critical_thinking", "decision_making"],
+      "demand_weight": 0.92
+    },
+    {
+      "id": "communication_skills",
+      "name": "Communication Skills",
+      "aliases": ["communication", "verbal communication", "written communication", "interpersonal skills", "effective communication"],
+      "category": "soft_skills",
+      "prerequisites": [],
+      "related": ["presentation_skills", "client_management", "team_collaboration"],
+      "demand_weight": 0.90
+    },
+    {
+      "id": "team_collaboration",
+      "name": "Team Collaboration",
+      "aliases": ["teamwork", "collaboration", "cross-functional collaboration", "team player"],
+      "category": "soft_skills",
+      "prerequisites": [],
+      "related": ["agile_scrum", "communication_skills"],
+      "demand_weight": 0.88
+    },
+    {
+      "id": "agile_scrum",
+      "name": "Agile & Scrum Methodology",
+      "aliases": ["agile", "scrum", "kanban", "sprint planning", "scrum master", "daily standups"],
+      "category": "soft_skills",
+      "prerequisites": [],
+      "related": ["team_collaboration", "product_management_lifecycle"],
+      "demand_weight": 0.87
+    },
+    {
+      "id": "critical_thinking",
+      "name": "Critical Thinking",
+      "aliases": ["critical thinking", "logical reasoning", "objective evaluation"],
+      "category": "soft_skills",
+      "prerequisites": [],
+      "related": ["problem_solving", "decision_making"],
+      "demand_weight": 0.85
+    },
+    {
+      "id": "time_management",
+      "name": "Time Management",
+      "aliases": ["time management", "prioritization", "deadline management", "task management"],
+      "category": "soft_skills",
+      "prerequisites": [],
+      "related": ["adaptability", "problem_solving"],
+      "demand_weight": 0.84
+    },
+    {
+      "id": "leadership",
+      "name": "Leadership & Mentoring",
+      "aliases": ["leadership", "team leadership", "mentoring", "people management", "tech lead"],
+      "category": "soft_skills",
+      "prerequisites": ["team_collaboration"],
+      "related": ["emotional_intelligence", "conflict_resolution"],
+      "demand_weight": 0.81
+    },
+    {
+      "id": "emotional_intelligence",
+      "name": "Emotional Intelligence",
+      "aliases": ["emotional intelligence", "eq", "empathy", "interpersonal intelligence"],
+      "category": "soft_skills",
+      "prerequisites": [],
+      "related": ["leadership", "conflict_resolution", "team_collaboration"],
+      "demand_weight": 0.78
+    },
+    {
+      "id": "client_management",
+      "name": "Client & Stakeholder Management",
+      "aliases": ["client management", "stakeholder management", "client communication", "account management"],
+      "category": "soft_skills",
+      "prerequisites": ["communication_skills"],
+      "related": ["communication_skills", "negotiation", "presentation_skills"],
+      "demand_weight": 0.80
+    },
+    {
+      "id": "technical_writing",
+      "name": "Technical Writing & Documentation",
+      "aliases": ["technical writing", "documentation", "api documentation", "user guides", "confluence"],
+      "category": "soft_skills",
+      "prerequisites": ["communication_skills"],
+      "related": ["communication_skills", "presentation_skills"],
+      "demand_weight": 0.79
+    },
+    {
+      "id": "presentation_skills",
+      "name": "Presentation & Public Speaking",
+      "aliases": ["presentation skills", "public speaking", "demoing", "slide deck preparation"],
+      "category": "soft_skills",
+      "prerequisites": ["communication_skills"],
+      "related": ["communication_skills", "client_management"],
+      "demand_weight": 0.77
+    },
+    {
+      "id": "conflict_resolution",
+      "name": "Conflict Resolution",
+      "aliases": ["conflict resolution", "dispute resolution", "consensus building"],
+      "category": "soft_skills",
+      "prerequisites": ["emotional_intelligence"],
+      "related": ["leadership", "team_collaboration", "emotional_intelligence"],
+      "demand_weight": 0.74
+    },
+    {
+      "id": "adaptability",
+      "name": "Adaptability & Continuous Learning",
+      "aliases": ["adaptability", "continuous learning", "fast learner", "growth mindset"],
+      "category": "soft_skills",
+      "prerequisites": [],
+      "related": ["problem_solving", "time_management"],
+      "demand_weight": 0.86
+    },
+    {
+      "id": "negotiation",
+      "name": "Negotiation Skills",
+      "aliases": ["negotiation", "contract negotiation", "persuasion"],
+      "category": "soft_skills",
+      "prerequisites": ["communication_skills"],
+      "related": ["client_management", "communication_skills"],
+      "demand_weight": 0.72
+    },
+    {
+      "id": "decision_making",
+      "name": "Decision Making & Strategic Thinking",
+      "aliases": ["decision making", "strategic thinking", "trade-off analysis", "strategic planning"],
+      "category": "soft_skills",
+      "prerequisites": ["critical_thinking"],
+      "related": ["critical_thinking", "problem_solving", "leadership"],
+      "demand_weight": 0.82
+    },
+    {
+      "id": "product_mindset",
+      "name": "Product Mindset",
+      "aliases": ["product mindset", "product thinking", "user empathy", "customer obsession", "business acumen"],
+      "category": "soft_skills",
+      "prerequisites": [],
+      "related": ["product_management_lifecycle", "user_journey_mapping"],
+      "demand_weight": 0.83
+    },
+    {
+      "id": "ui_design",
+      "name": "User Interface (UI) Design",
+      "aliases": ["ui design", "ui", "user interface design", "visual design", "interface design"],
+      "category": "design",
+      "prerequisites": [],
+      "related": ["ux_research", "figma", "design_systems", "responsive_web_design"],
+      "demand_weight": 0.83
+    },
+    {
+      "id": "ux_research",
+      "name": "User Experience (UX) Research",
+      "aliases": ["ux research", "ux", "user research", "user experience", "user testing", "heuristic evaluation"],
+      "category": "design",
+      "prerequisites": [],
+      "related": ["ui_design", "user_journey_mapping", "usability_testing"],
+      "demand_weight": 0.82
+    },
+    {
+      "id": "figma",
+      "name": "Figma",
+      "aliases": ["figma", "figjam", "figma design", "figma tool"],
+      "category": "design",
+      "prerequisites": [],
+      "related": ["ui_design", "wireframing", "design_systems", "adobe_xd"],
+      "demand_weight": 0.88
+    },
+    {
+      "id": "adobe_xd",
+      "name": "Adobe XD",
+      "aliases": ["adobe xd", "xd", "adobe experience design"],
+      "category": "design",
+      "prerequisites": [],
+      "related": ["figma", "ui_design", "wireframing"],
+      "demand_weight": 0.65
+    },
+    {
+      "id": "sketch_app",
+      "name": "Sketch",
+      "aliases": ["sketch", "sketch app", "bohemian sketch"],
+      "category": "design",
+      "prerequisites": [],
+      "related": ["figma", "adobe_xd", "ui_design"],
+      "demand_weight": 0.58
+    },
+    {
+      "id": "wireframing",
+      "name": "Wireframing & Prototyping",
+      "aliases": ["wireframing", "prototyping", "wireframes", "interactive prototypes", "mockups"],
+      "category": "design",
+      "prerequisites": ["ui_design"],
+      "related": ["figma", "ui_design", "ux_research"],
+      "demand_weight": 0.82
+    },
+    {
+      "id": "design_systems",
+      "name": "Design Systems & Component Libraries",
+      "aliases": ["design system", "design systems", "component library", "ui library", "tokens"],
+      "category": "design",
+      "prerequisites": ["ui_design"],
+      "related": ["figma", "ui_design", "material_ui", "storybook"],
+      "demand_weight": 0.80
+    },
+    {
+      "id": "user_journey_mapping",
+      "name": "User Journey Mapping & Personas",
+      "aliases": ["user journey mapping", "user persona", "user personas", "customer journey map", "journey mapping"],
+      "category": "design",
+      "prerequisites": ["ux_research"],
+      "related": ["ux_research", "information_architecture", "usability_testing"],
+      "demand_weight": 0.77
+    },
+    {
+      "id": "usability_testing",
+      "name": "Usability Testing",
+      "aliases": ["usability testing", "user testing", "a/b testing ux", "think aloud testing"],
+      "category": "design",
+      "prerequisites": ["ux_research"],
+      "related": ["ux_research", "user_journey_mapping"],
+      "demand_weight": 0.76
+    },
+    {
+      "id": "interaction_design",
+      "name": "Interaction Design",
+      "aliases": ["interaction design", "ixd", "interactive design", "micro interactions"],
+      "category": "design",
+      "prerequisites": ["ui_design"],
+      "related": ["ui_design", "wireframing", "micro_interactions"],
+      "demand_weight": 0.75
+    },
+    {
+      "id": "graphic_design",
+      "name": "Graphic Design",
+      "aliases": ["graphic design", "visual graphics", "branding", "logo design"],
+      "category": "design",
+      "prerequisites": [],
+      "related": ["adobe_photoshop", "adobe_illustrator"],
+      "demand_weight": 0.70
+    },
+    {
+      "id": "adobe_photoshop",
+      "name": "Adobe Photoshop",
+      "aliases": ["photoshop", "ps", "adobe ps", "adobe photoshop"],
+      "category": "design",
+      "prerequisites": [],
+      "related": ["graphic_design", "adobe_illustrator"],
+      "demand_weight": 0.72
+    },
+    {
+      "id": "adobe_illustrator",
+      "name": "Adobe Illustrator",
+      "aliases": ["illustrator", "ai", "adobe ai", "adobe illustrator", "vector illustration"],
+      "category": "design",
+      "prerequisites": [],
+      "related": ["graphic_design", "adobe_photoshop"],
+      "demand_weight": 0.69
+    },
+    {
+      "id": "information_architecture",
+      "name": "Information Architecture",
+      "aliases": ["information architecture", "ia", "sitemap", "card sorting", "site architecture"],
+      "category": "design",
+      "prerequisites": ["ux_research"],
+      "related": ["ux_research", "wireframing", "user_journey_mapping"],
+      "demand_weight": 0.74
+    },
+    {
+      "id": "micro_interactions",
+      "name": "Micro-interactions & Motion Design",
+      "aliases": ["micro interactions", "microinteractions", "motion design", "ui animation", "lottie"],
+      "category": "design",
+      "prerequisites": ["ui_design"],
+      "related": ["interaction_design", "ui_design", "figma"],
+      "demand_weight": 0.68
+    },
+    {
+      "id": "product_management_lifecycle",
+      "name": "Product Lifecycle Management",
+      "aliases": ["product management", "product roadmap", "product backlog", "prd", "product requirements document"],
+      "category": "design",
+      "prerequisites": ["agile_scrum"],
+      "related": ["agile_scrum", "product_mindset", "user_journey_mapping"],
+      "demand_weight": 0.84
+    },
+    {
+      "id": "blockchain_fundamentals",
+      "name": "Blockchain Fundamentals",
+      "aliases": ["blockchain", "distributed ledger technology", "dlt", "blockchain technology", "crypto"],
+      "category": "blockchain",
+      "prerequisites": ["cryptography"],
+      "related": ["ethereum", "smart_contracts", "web3_js", "cryptography"],
+      "demand_weight": 0.74
+    },
+    {
+      "id": "ethereum",
+      "name": "Ethereum",
+      "aliases": ["ethereum", "eth", "evm", "ethereum virtual machine"],
+      "category": "blockchain",
+      "prerequisites": ["blockchain_fundamentals"],
+      "related": ["smart_contracts", "solidity", "web3_js", "ethers_js"],
+      "demand_weight": 0.75
+    },
+    {
+      "id": "smart_contracts",
+      "name": "Smart Contracts",
+      "aliases": ["smart contract", "smart contracts", "smart contract development"],
+      "category": "blockchain",
+      "prerequisites": ["blockchain_fundamentals"],
+      "related": ["solidity", "ethereum", "hardhat", "truffle"],
+      "demand_weight": 0.76
+    },
+    {
+      "id": "solidity",
+      "name": "Solidity",
+      "aliases": ["solidity", "sol", "solidity language", "solidity programming"],
+      "category": "blockchain",
+      "prerequisites": ["smart_contracts", "javascript"],
+      "related": ["ethereum", "smart_contracts", "hardhat", "truffle", "ethers_js"],
+      "demand_weight": 0.77
+    },
+    {
+      "id": "web3_js",
+      "name": "Web3.js",
+      "aliases": ["web3.js", "web3js", "web3 js", "web3"],
+      "category": "blockchain",
+      "prerequisites": ["javascript", "blockchain_fundamentals"],
+      "related": ["ethers_js", "solidity", "ethereum", "react"],
+      "demand_weight": 0.71
+    },
+    {
+      "id": "ethers_js",
+      "name": "Ethers.js",
+      "aliases": ["ethers.js", "ethersjs", "ethers js", "ethers"],
+      "category": "blockchain",
+      "prerequisites": ["javascript", "blockchain_fundamentals"],
+      "related": ["web3_js", "solidity", "ethereum", "react"],
+      "demand_weight": 0.73
+    },
+    {
+      "id": "hardhat",
+      "name": "Hardhat",
+      "aliases": ["hardhat", "hardhat framework", "nomiclabs hardhat"],
+      "category": "blockchain",
+      "prerequisites": ["solidity", "javascript"],
+      "related": ["solidity", "truffle", "smart_contracts", "ethers_js"],
+      "demand_weight": 0.72
+    },
+    {
+      "id": "truffle",
+      "name": "Truffle",
+      "aliases": ["truffle", "truffle suite", "ganache"],
+      "category": "blockchain",
+      "prerequisites": ["solidity", "javascript"],
+      "related": ["hardhat", "solidity", "smart_contracts"],
+      "demand_weight": 0.63
+    },
+    {
+      "id": "ipfs",
+      "name": "IPFS (InterPlanetary File System)",
+      "aliases": ["ipfs", "interplanetary file system", "decentralized storage", "filecoin"],
+      "category": "blockchain",
+      "prerequisites": ["blockchain_fundamentals"],
+      "related": ["blockchain_fundamentals", "nft_development"],
+      "demand_weight": 0.65
+    },
+    {
+      "id": "defi",
+      "name": "Decentralized Finance (DeFi)",
+      "aliases": ["defi", "decentralized finance", "yield farming", "liquidity pools", "uniswap", "amm"],
+      "category": "blockchain",
+      "prerequisites": ["smart_contracts"],
+      "related": ["smart_contracts", "solidity", "ethereum"],
+      "demand_weight": 0.70
+    },
+    {
+      "id": "nft_development",
+      "name": "NFT Development & Standards (ERC-721, ERC-1155)",
+      "aliases": ["nft", "nfts", "erc721", "erc-721", "erc1155", "erc-1155", "non-fungible token"],
+      "category": "blockchain",
+      "prerequisites": ["smart_contracts", "solidity"],
+      "related": ["smart_contracts", "solidity", "ipfs"],
+      "demand_weight": 0.66
+    },
+    {
+      "id": "hyperledger_fabric",
+      "name": "Hyperledger Fabric",
+      "aliases": ["hyperledger", "hyperledger fabric", "enterprise blockchain", "permissioned blockchain"],
+      "category": "blockchain",
+      "prerequisites": ["blockchain_fundamentals"],
+      "related": ["blockchain_fundamentals", "go", "docker"],
+      "demand_weight": 0.64
+    },
+    {
+      "id": "solana",
+      "name": "Solana Development",
+      "aliases": ["solana", "sol", "anchor framework", "solana blockchain"],
+      "category": "blockchain",
+      "prerequisites": ["blockchain_fundamentals", "rust"],
+      "related": ["rust_smart_contracts", "rust", "blockchain_fundamentals"],
+      "demand_weight": 0.71
+    },
+    {
+      "id": "rust_smart_contracts",
+      "name": "Rust for Solana / NEAR",
+      "aliases": ["solana rust", "anchor rust", "rust contracts", "rust smart contracts"],
+      "category": "blockchain",
+      "prerequisites": ["rust", "smart_contracts"],
+      "related": ["rust", "solana", "smart_contracts"],
+      "demand_weight": 0.68
+    },
+    {
+      "id": "crypto_wallets",
+      "name": "Crypto Wallets & Metamask Integration",
+      "aliases": ["metamask", "crypto wallet", "walletconnect", "web3modal", "coinbase wallet"],
+      "category": "blockchain",
+      "prerequisites": ["web3_js"],
+      "related": ["web3_js", "ethers_js", "ethereum"],
+      "demand_weight": 0.72
+    },
+    {
+      "id": "polygon_network",
+      "name": "Polygon Network",
+      "aliases": ["polygon", "matic", "polygon matic", "polygon pos", "polygon zkevm"],
+      "category": "blockchain",
+      "prerequisites": ["ethereum"],
+      "related": ["ethereum", "solidity", "smart_contracts"],
+      "demand_weight": 0.70
+    },
+    {
+      "id": "smart_contract_auditing",
+      "name": "Smart Contract Auditing & Security",
+      "aliases": ["smart contract audit", "smart contract auditing", "slither", "mythril", "solidity security"],
+      "category": "blockchain",
+      "prerequisites": ["solidity", "smart_contracts"],
+      "related": ["solidity", "smart_contracts"],
+      "demand_weight": 0.72
+    },
+    {
+      "id": "manual_testing",
+      "name": "Manual Software Testing",
+      "aliases": ["manual testing", "manual qa", "software testing", "test case design", "black box testing", "qa testing"],
+      "category": "testing",
+      "prerequisites": [],
+      "related": ["automated_testing", "unit_testing"],
+      "demand_weight": 0.75
+    },
+    {
+      "id": "automated_testing",
+      "name": "Automated Testing",
+      "aliases": ["automation testing", "test automation", "automated testing", "qa automation", "automated tests"],
+      "category": "testing",
+      "prerequisites": ["manual_testing"],
+      "related": ["selenium", "cypress", "playwright", "unit_testing"],
+      "demand_weight": 0.84
+    },
+    {
+      "id": "unit_testing",
+      "name": "Unit Testing",
+      "aliases": ["unit testing", "unit test", "unit tests", "tdd", "test driven development"],
+      "category": "testing",
+      "prerequisites": [],
+      "related": ["pytest", "junit", "jest", "automated_testing"],
+      "demand_weight": 0.81
+    },
+    {
+      "id": "integration_testing",
+      "name": "Integration Testing",
+      "aliases": ["integration testing", "integration tests", "component testing"],
+      "category": "testing",
+      "prerequisites": ["unit_testing"],
+      "related": ["automated_testing", "postman", "unit_testing"],
+      "demand_weight": 0.78
+    },
+    {
+      "id": "selenium",
+      "name": "Selenium WebDriver",
+      "aliases": ["selenium", "selenium webdriver", "selenium grid", "selenium with java", "selenium python"],
+      "category": "testing",
+      "prerequisites": ["automated_testing"],
+      "related": ["cypress", "playwright", "testng", "cucumber_bdd"],
+      "demand_weight": 0.81
+    },
+    {
+      "id": "cypress",
+      "name": "Cypress",
+      "aliases": ["cypress", "cypress.io", "cypress testing", "cypress e2e"],
+      "category": "testing",
+      "prerequisites": ["javascript", "automated_testing"],
+      "related": ["playwright", "selenium", "jest", "automated_testing"],
+      "demand_weight": 0.77
+    },
+    {
+      "id": "playwright",
+      "name": "Playwright",
+      "aliases": ["playwright", "microsoft playwright", "playwright testing"],
+      "category": "testing",
+      "prerequisites": ["automated_testing"],
+      "related": ["cypress", "selenium", "automated_testing"],
+      "demand_weight": 0.76
+    },
+    {
+      "id": "jest",
+      "name": "Jest",
+      "aliases": ["jest", "jestjs", "jest testing", "react testing library", "rtl"],
+      "category": "testing",
+      "prerequisites": ["javascript", "unit_testing"],
+      "related": ["react", "unit_testing", "cypress"],
+      "demand_weight": 0.77
+    },
+    {
+      "id": "pytest",
+      "name": "PyTest",
+      "aliases": ["pytest", "py.test", "python pytest"],
+      "category": "testing",
+      "prerequisites": ["python", "unit_testing"],
+      "related": ["python", "unit_testing", "automated_testing"],
+      "demand_weight": 0.78
+    },
+    {
+      "id": "junit",
+      "name": "JUnit",
+      "aliases": ["junit", "junit 5", "junit 4", "junit jupiter"],
+      "category": "testing",
+      "prerequisites": ["java", "unit_testing"],
+      "related": ["java", "testng", "mockito", "unit_testing"],
+      "demand_weight": 0.78
+    },
+    {
+      "id": "postman",
+      "name": "Postman (API Testing)",
+      "aliases": ["postman", "postman api", "newman", "postman collections", "api testing"],
+      "category": "testing",
+      "prerequisites": ["rest_api"],
+      "related": ["rest_api", "rest_assured", "automated_testing"],
+      "demand_weight": 0.83
+    },
+    {
+      "id": "jmeter",
+      "name": "Apache JMeter (Performance Testing)",
+      "aliases": ["jmeter", "apache jmeter", "performance testing", "load testing jmeter"],
+      "category": "testing",
+      "prerequisites": [],
+      "related": ["load_testing", "automated_testing"],
+      "demand_weight": 0.74
+    },
+    {
+      "id": "testng",
+      "name": "TestNG",
+      "aliases": ["testng", "test ng", "testng framework"],
+      "category": "testing",
+      "prerequisites": ["java", "unit_testing"],
+      "related": ["junit", "selenium", "java"],
+      "demand_weight": 0.74
+    },
+    {
+      "id": "cucumber_bdd",
+      "name": "Cucumber & BDD",
+      "aliases": ["cucumber", "bdd", "behavior driven development", "gherkin", "cucumber bdd"],
+      "category": "testing",
+      "prerequisites": ["automated_testing"],
+      "related": ["selenium", "testng", "automated_testing"],
+      "demand_weight": 0.72
+    },
+    {
+      "id": "appium",
+      "name": "Appium (Mobile Testing)",
+      "aliases": ["appium", "mobile automation", "appium testing", "mobile app testing"],
+      "category": "testing",
+      "prerequisites": ["automated_testing"],
+      "related": ["selenium", "android_development", "ios_development"],
+      "demand_weight": 0.73
+    },
+    {
+      "id": "load_testing",
+      "name": "Load & Stress Testing",
+      "aliases": ["load testing", "stress testing", "performance testing", "k6", "locust", "gatling"],
+      "category": "testing",
+      "prerequisites": [],
+      "related": ["jmeter", "automated_testing"],
+      "demand_weight": 0.73
+    },
+    {
+      "id": "mockito",
+      "name": "Mockito",
+      "aliases": ["mockito", "mocking framework", "powermock"],
+      "category": "testing",
+      "prerequisites": ["java", "junit"],
+      "related": ["junit", "unit_testing", "java"],
+      "demand_weight": 0.72
+    },
+    {
+      "id": "rest_assured",
+      "name": "REST Assured",
+      "aliases": ["rest assured", "rest-assured", "restassured"],
+      "category": "testing",
+      "prerequisites": ["java", "rest_api"],
+      "related": ["postman", "java", "automated_testing", "rest_api"],
+      "demand_weight": 0.75
+    }
+  ],
+  "roles": [
+    {
+      "id": "ai_engineer",
+      "title": "AI Engineer",
+      "required_skills": [
+        {"skill_id": "python", "proficiency_required": 85},
+        {"skill_id": "machine_learning", "proficiency_required": 80},
+        {"skill_id": "deep_learning", "proficiency_required": 80},
+        {"skill_id": "large_language_models", "proficiency_required": 80},
+        {"skill_id": "generative_ai", "proficiency_required": 80},
+        {"skill_id": "rag_systems", "proficiency_required": 75},
+        {"skill_id": "langchain", "proficiency_required": 75},
+        {"skill_id": "vector_databases", "proficiency_required": 70},
+        {"skill_id": "pytorch", "proficiency_required": 75},
+        {"skill_id": "prompt_engineering", "proficiency_required": 75},
+        {"skill_id": "problem_solving", "proficiency_required": 80}
+      ]
+    },
+    {
+      "id": "data_scientist",
+      "title": "Data Scientist",
+      "required_skills": [
+        {"skill_id": "python", "proficiency_required": 85},
+        {"skill_id": "statistics", "proficiency_required": 85},
+        {"skill_id": "machine_learning", "proficiency_required": 85},
+        {"skill_id": "pandas", "proficiency_required": 85},
+        {"skill_id": "numpy", "proficiency_required": 80},
+        {"skill_id": "scikit_learn", "proficiency_required": 80},
+        {"skill_id": "sql", "proficiency_required": 80},
+        {"skill_id": "data_visualization", "proficiency_required": 75},
+        {"skill_id": "exploratory_data_analysis", "proficiency_required": 80},
+        {"skill_id": "problem_solving", "proficiency_required": 85}
+      ]
+    },
+    {
+      "id": "full_stack_developer",
+      "title": "Full Stack Developer",
+      "required_skills": [
+        {"skill_id": "javascript", "proficiency_required": 85},
+        {"skill_id": "typescript", "proficiency_required": 80},
+        {"skill_id": "react", "proficiency_required": 80},
+        {"skill_id": "html5", "proficiency_required": 85},
+        {"skill_id": "css3", "proficiency_required": 80},
+        {"skill_id": "node_js", "proficiency_required": 80},
+        {"skill_id": "express_js", "proficiency_required": 75},
+        {"skill_id": "sql", "proficiency_required": 75},
+        {"skill_id": "postgresql", "proficiency_required": 75},
+        {"skill_id": "mongodb", "proficiency_required": 70},
+        {"skill_id": "git", "proficiency_required": 80},
+        {"skill_id": "rest_api", "proficiency_required": 85}
+      ]
+    },
+    {
+      "id": "backend_developer",
+      "title": "Backend Developer",
+      "required_skills": [
+        {"skill_id": "java", "proficiency_required": 85},
+        {"skill_id": "spring_boot", "proficiency_required": 85},
+        {"skill_id": "sql", "proficiency_required": 80},
+        {"skill_id": "postgresql", "proficiency_required": 80},
+        {"skill_id": "redis", "proficiency_required": 75},
+        {"skill_id": "rest_api", "proficiency_required": 85},
+        {"skill_id": "microservices", "proficiency_required": 80},
+        {"skill_id": "docker", "proficiency_required": 75},
+        {"skill_id": "git", "proficiency_required": 80},
+        {"skill_id": "problem_solving", "proficiency_required": 80}
+      ]
+    },
+    {
+      "id": "frontend_developer",
+      "title": "Frontend Developer",
+      "required_skills": [
+        {"skill_id": "javascript", "proficiency_required": 90},
+        {"skill_id": "typescript", "proficiency_required": 85},
+        {"skill_id": "react", "proficiency_required": 85},
+        {"skill_id": "next_js", "proficiency_required": 75},
+        {"skill_id": "html5", "proficiency_required": 90},
+        {"skill_id": "css3", "proficiency_required": 85},
+        {"skill_id": "tailwind_css", "proficiency_required": 80},
+        {"skill_id": "redux", "proficiency_required": 75},
+        {"skill_id": "responsive_web_design", "proficiency_required": 85},
+        {"skill_id": "git", "proficiency_required": 80}
+      ]
+    },
+    {
+      "id": "devops_engineer",
+      "title": "DevOps Engineer",
+      "required_skills": [
+        {"skill_id": "linux_admin", "proficiency_required": 85},
+        {"skill_id": "shell_scripting", "proficiency_required": 80},
+        {"skill_id": "docker", "proficiency_required": 85},
+        {"skill_id": "kubernetes", "proficiency_required": 80},
+        {"skill_id": "ci_cd_pipelines", "proficiency_required": 85},
+        {"skill_id": "jenkins", "proficiency_required": 80},
+        {"skill_id": "github_actions", "proficiency_required": 75},
+        {"skill_id": "terraform", "proficiency_required": 75},
+        {"skill_id": "aws", "proficiency_required": 80},
+        {"skill_id": "git", "proficiency_required": 85},
+        {"skill_id": "prometheus", "proficiency_required": 70},
+        {"skill_id": "grafana", "proficiency_required": 70}
+      ]
+    },
+    {
+      "id": "cloud_architect",
+      "title": "Cloud Architect",
+      "required_skills": [
+        {"skill_id": "aws", "proficiency_required": 90},
+        {"skill_id": "cloud_architecture", "proficiency_required": 90},
+        {"skill_id": "azure", "proficiency_required": 80},
+        {"skill_id": "terraform", "proficiency_required": 85},
+        {"skill_id": "cloud_security", "proficiency_required": 85},
+        {"skill_id": "kubernetes", "proficiency_required": 80},
+        {"skill_id": "microservices", "proficiency_required": 85},
+        {"skill_id": "serverless_architecture", "proficiency_required": 80},
+        {"skill_id": "decision_making", "proficiency_required": 85}
+      ]
+    },
+    {
+      "id": "cybersecurity_analyst",
+      "title": "Cybersecurity Analyst",
+      "required_skills": [
+        {"skill_id": "network_security", "proficiency_required": 85},
+        {"skill_id": "application_security", "proficiency_required": 80},
+        {"skill_id": "ethical_hacking", "proficiency_required": 80},
+        {"skill_id": "penetration_testing", "proficiency_required": 75},
+        {"skill_id": "owasp_top_10", "proficiency_required": 85},
+        {"skill_id": "siem", "proficiency_required": 80},
+        {"skill_id": "incident_response", "proficiency_required": 75},
+        {"skill_id": "vulnerability_assessment", "proficiency_required": 80},
+        {"skill_id": "wireshark", "proficiency_required": 75},
+        {"skill_id": "burp_suite", "proficiency_required": 75}
+      ]
+    },
+    {
+      "id": "mobile_developer_android",
+      "title": "Mobile Developer (Android)",
+      "required_skills": [
+        {"skill_id": "kotlin", "proficiency_required": 90},
+        {"skill_id": "android_development", "proficiency_required": 90},
+        {"skill_id": "android_sdk", "proficiency_required": 85},
+        {"skill_id": "jetpack_compose", "proficiency_required": 80},
+        {"skill_id": "android_studio", "proficiency_required": 85},
+        {"skill_id": "rest_api", "proficiency_required": 80},
+        {"skill_id": "git", "proficiency_required": 80},
+        {"skill_id": "app_store_deployment", "proficiency_required": 75}
+      ]
+    },
+    {
+      "id": "mobile_developer_ios",
+      "title": "Mobile Developer (iOS)",
+      "required_skills": [
+        {"skill_id": "swift", "proficiency_required": 90},
+        {"skill_id": "ios_development", "proficiency_required": 90},
+        {"skill_id": "swiftui", "proficiency_required": 85},
+        {"skill_id": "uikit", "proficiency_required": 80},
+        {"skill_id": "xcode", "proficiency_required": 85},
+        {"skill_id": "rest_api", "proficiency_required": 80},
+        {"skill_id": "git", "proficiency_required": 80},
+        {"skill_id": "app_store_deployment", "proficiency_required": 75}
+      ]
+    },
+    {
+      "id": "ml_engineer",
+      "title": "ML Engineer",
+      "required_skills": [
+        {"skill_id": "python", "proficiency_required": 85},
+        {"skill_id": "machine_learning", "proficiency_required": 85},
+        {"skill_id": "deep_learning", "proficiency_required": 80},
+        {"skill_id": "scikit_learn", "proficiency_required": 80},
+        {"skill_id": "pytorch", "proficiency_required": 80},
+        {"skill_id": "mlops", "proficiency_required": 80},
+        {"skill_id": "mlflow", "proficiency_required": 75},
+        {"skill_id": "docker", "proficiency_required": 75},
+        {"skill_id": "sql", "proficiency_required": 75},
+        {"skill_id": "ci_cd_pipelines", "proficiency_required": 70}
+      ]
+    },
+    {
+      "id": "data_analyst",
+      "title": "Data Analyst",
+      "required_skills": [
+        {"skill_id": "sql", "proficiency_required": 85},
+        {"skill_id": "excel", "proficiency_required": 85},
+        {"skill_id": "power_bi", "proficiency_required": 80},
+        {"skill_id": "tableau", "proficiency_required": 75},
+        {"skill_id": "data_analysis", "proficiency_required": 85},
+        {"skill_id": "data_visualization", "proficiency_required": 80},
+        {"skill_id": "python", "proficiency_required": 70},
+        {"skill_id": "pandas", "proficiency_required": 70},
+        {"skill_id": "communication_skills", "proficiency_required": 80}
+      ]
+    },
+    {
+      "id": "product_manager",
+      "title": "Product Manager",
+      "required_skills": [
+        {"skill_id": "product_management_lifecycle", "proficiency_required": 90},
+        {"skill_id": "agile_scrum", "proficiency_required": 85},
+        {"skill_id": "product_mindset", "proficiency_required": 90},
+        {"skill_id": "data_analysis", "proficiency_required": 75},
+        {"skill_id": "ux_research", "proficiency_required": 70},
+        {"skill_id": "user_journey_mapping", "proficiency_required": 75},
+        {"skill_id": "communication_skills", "proficiency_required": 90},
+        {"skill_id": "leadership", "proficiency_required": 85},
+        {"skill_id": "client_management", "proficiency_required": 85}
+      ]
+    },
+    {
+      "id": "ui_ux_designer",
+      "title": "UI/UX Designer",
+      "required_skills": [
+        {"skill_id": "ui_design", "proficiency_required": 90},
+        {"skill_id": "ux_research", "proficiency_required": 85},
+        {"skill_id": "figma", "proficiency_required": 90},
+        {"skill_id": "wireframing", "proficiency_required": 85},
+        {"skill_id": "design_systems", "proficiency_required": 80},
+        {"skill_id": "user_journey_mapping", "proficiency_required": 80},
+        {"skill_id": "usability_testing", "proficiency_required": 75},
+        {"skill_id": "interaction_design", "proficiency_required": 75}
+      ]
+    },
+    {
+      "id": "blockchain_developer",
+      "title": "Blockchain Developer",
+      "required_skills": [
+        {"skill_id": "blockchain_fundamentals", "proficiency_required": 85},
+        {"skill_id": "ethereum", "proficiency_required": 85},
+        {"skill_id": "solidity", "proficiency_required": 85},
+        {"skill_id": "smart_contracts", "proficiency_required": 85},
+        {"skill_id": "web3_js", "proficiency_required": 75},
+        {"skill_id": "ethers_js", "proficiency_required": 75},
+        {"skill_id": "hardhat", "proficiency_required": 75},
+        {"skill_id": "cryptography", "proficiency_required": 75},
+        {"skill_id": "javascript", "proficiency_required": 80}
+      ]
+    },
+    {
+      "id": "qa_automation_engineer",
+      "title": "QA Automation Engineer",
+      "required_skills": [
+        {"skill_id": "automated_testing", "proficiency_required": 90},
+        {"skill_id": "manual_testing", "proficiency_required": 80},
+        {"skill_id": "selenium", "proficiency_required": 85},
+        {"skill_id": "cypress", "proficiency_required": 75},
+        {"skill_id": "postman", "proficiency_required": 85},
+        {"skill_id": "java", "proficiency_required": 75},
+        {"skill_id": "python", "proficiency_required": 75},
+        {"skill_id": "testng", "proficiency_required": 75},
+        {"skill_id": "ci_cd_pipelines", "proficiency_required": 70},
+        {"skill_id": "git", "proficiency_required": 75}
+      ]
+    },
+    {
+      "id": "data_engineer",
+      "title": "Data Engineer",
+      "required_skills": [
+        {"skill_id": "python", "proficiency_required": 85},
+        {"skill_id": "sql", "proficiency_required": 90},
+        {"skill_id": "apache_spark", "proficiency_required": 85},
+        {"skill_id": "pyspark", "proficiency_required": 80},
+        {"skill_id": "etl_pipelines", "proficiency_required": 85},
+        {"skill_id": "data_warehousing", "proficiency_required": 80},
+        {"skill_id": "snowflake", "proficiency_required": 80},
+        {"skill_id": "apache_airflow", "proficiency_required": 80},
+        {"skill_id": "apache_kafka", "proficiency_required": 75},
+        {"skill_id": "docker", "proficiency_required": 70}
+      ]
+    },
+    {
+      "id": "site_reliability_engineer",
+      "title": "Site Reliability Engineer (SRE)",
+      "required_skills": [
+        {"skill_id": "linux_admin", "proficiency_required": 90},
+        {"skill_id": "shell_scripting", "proficiency_required": 85},
+        {"skill_id": "python", "proficiency_required": 80},
+        {"skill_id": "kubernetes", "proficiency_required": 85},
+        {"skill_id": "docker", "proficiency_required": 85},
+        {"skill_id": "prometheus", "proficiency_required": 80},
+        {"skill_id": "grafana", "proficiency_required": 80},
+        {"skill_id": "terraform", "proficiency_required": 80},
+        {"skill_id": "ci_cd_pipelines", "proficiency_required": 80},
+        {"skill_id": "problem_solving", "proficiency_required": 90}
+      ]
+    }
+  ]
+}
